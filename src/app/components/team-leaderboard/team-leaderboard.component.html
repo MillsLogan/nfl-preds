@@ -1,0 +1,23 @@
+<h1 class="text-center display-6">Leaderboard</h1>
+<div class="container table-wrapper table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Correct</th>
+                <th>Incorrect</th>
+                <th>Predicted Record</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let playerName of getPlayers(); let i = index">
+                <th scope="row" class="rank">{{ i }}</th>
+                <td class="player-name">{{ playerName }}</td>
+                <td class="correct">{{ playerPredictions[playerName].correct }}</td>
+                <td class="incorrect">{{ playerPredictions[playerName].incorrect }}</td>
+                <td class="predictedRecord">{{ playerPredictions[playerName].wins }} - {{ playerPredictions[playerName].losses }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

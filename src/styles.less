@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.content-wrapper, .table-wrapper{
+    
+    border-radius: 5px;
+    padding: 4px;
+   
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    table{
+        backdrop-filter: blur(5px);
+        margin-bottom: 0;
+    }
+    transition: 0.5s;
+    
+    &:hover{
+        box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes spin-border{
+    0%{
+        background-image: linear-gradient(135deg, brown, khaki);
+    }10%{
+        background-image: linear-gradient(153deg, brown, khaki);
+    }20%{
+        background-image: linear-gradient(171deg, brown, khaki);
+    }30%{
+        background-image: linear-gradient(189deg, brown, khaki);
+    }40%{
+        background-image: linear-gradient(207deg, brown, khaki);
+    }50%{
+        background-image: linear-gradient(225deg, brown, khaki);
+    }60%{
+        background-image: linear-gradient(243deg, brown, khaki);
+    }70%{
+        background-image: linear-gradient(261deg, brown, khaki);
+    }80%{
+        background-image: linear-gradient(279deg, brown, khaki);
+    }90%{
+        background-image: linear-gradient(297deg, brown, khaki);
+    }100%{
+        background-image: linear-gradient(315deg, brown, khaki);
+    }
+}
+
+@keyframes spin-border-reverse{
+    0%{
+        background-image: linear-gradient(315deg, brown, khaki);
+    }10%{
+        background-image: linear-gradient(297deg, brown, khaki);
+    }20%{
+        background-image: linear-gradient(279deg, brown, khaki);
+    }30%{
+        background-image: linear-gradient(261deg, brown, khaki);
+    }40%{
+        background-image: linear-gradient(243deg, brown, khaki);
+    }50%{
+        background-image: linear-gradient(225deg, brown, khaki);
+    }60%{
+        background-image: linear-gradient(207deg, brown, khaki);
+    }70%{
+        background-image: linear-gradient(189deg, brown, khaki);
+    }80%{
+        background-image: linear-gradient(171deg, brown, khaki);
+    }90%{
+        background-image: linear-gradient(153deg, brown, khaki);
+    }100%{
+        background-image: linear-gradient(135deg, brown, khaki);
+    }
+}

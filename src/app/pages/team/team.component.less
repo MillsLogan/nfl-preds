@@ -1,0 +1,41 @@
+.row{
+    justify-content: center;
+    align-content: center;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+
+[class^="col-"]{
+    align-content: center;
+    flex-grow: 1;
+}
+
+[class*="-container"]{
+    flex-grow: 1;
+}
+
+.main-container{
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scrollbar-width: 0;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+
+.scrollable{
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    max-height: 80vh;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .scrollable{
+        max-height: 100%;
+    }
+}

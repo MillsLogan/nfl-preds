@@ -1,0 +1,21 @@
+<h1 class="text-center display-6">Leaderboard</h1>
+<div class="container table-wrapper">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Correct</th>
+                <th>Incorrect</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players; let i = index">
+                <th scope="row" class="rank">{{ i }}</th>
+                <td class="player-name">{{ player.name }}</td>
+                <td class="correct">{{ player.correct }}</td>
+                <td class="incorrect">{{ player.incorrect }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

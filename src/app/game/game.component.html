@@ -1,0 +1,43 @@
+<li class="list-group-item game-list-group">
+    <div class="row">
+        <div class="col-md-2 game-info">
+            <p class="game-info__week lead mx-auto">Week {{ game.week }}</p>
+            <p class="game-info__date lead mx-auto">{{ game.date.format("MM/DD/YY")}}</p>
+            <p class="game-info__time lead mx-auto">{{ game.time }}</p>
+        </div>
+        <div class="col-md-10 game-teams">
+            <div class="row game-teams-row">
+                <div class="col-5 game-teams__team m-auto">
+                    <p class="game-teams__team-name lead m-auto" [class.winner]="game.away === game.winner" [class.loser]="game.home === game.winner">{{ game.away }}</p>
+                </div>
+                <div class="col-2 game-teams__vs m-auto">
+                    <p class="game-teams__vs-text lead m-auto">VS</p>
+                </div>
+                <div class="col-5 game-teams__team m-auto">
+                    <p class="game-teams__team-name lead m-auto" [class.winner]="game.home === game.winner" [class.loser]="game.away === game.winner">{{ game.home }}</p>
+                </div>
+            </div>
+            <div class="game-information-pop">
+                <hr style="font-weight: bolder">
+                <div class="row">
+                    <div class="col-6 prediction-container away-predictions">
+                        <ng-container *ngFor="let prediction of predictions">
+                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.gameId === game.id && prediction.winner === game.away">
+                                {{prediction.playerName}}
+                            </span>
+                        </ng-container>
+                    </div>
+                    <div class="col-6 prediction-container home-predictions">
+                        <ng-container *ngFor="let prediction of predictions">
+                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.gameId === game.id && prediction.winner === game.home">
+                                {{prediction.playerName}}
+                            </span>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</li>
+

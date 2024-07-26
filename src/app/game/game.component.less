@@ -1,0 +1,118 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.game-info, .game-teams{
+    align-content: center;
+    text-align: center;
+}
+
+.game-info{
+    border-right: solid 1px white;
+    p{
+        font-weight: bolder;
+    }
+}
+
+[class^="game-teams__team"]{
+    transition: 0.2s;
+    font-size: 1.25rem;
+    font-weight: normal;
+    border-radius: 1em;
+    &.winner{
+        backdrop-filter: blur(5px);
+        background: #00640050;
+        border: darkslategrey solid 1px;
+    }
+
+    &.loser{
+        background: #8b000050;
+        border: maroon solid 1px;
+    }
+}
+
+.game-teams-row{
+    margin-top: 10px;
+}
+
+.game-list-group{
+    transition: 0.5s;
+    backdrop-filter: blur(5px);
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 1;
+        .game-information-pop{
+            position: relative;
+            z-index: 0;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        [class^="game-teams__team"]{
+            padding: 3px 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+    [class*="game-teams_"]{
+        font-size: 1em;
+    }
+
+    .game-info{
+        border-right: none;
+        border-bottom: solid 1px white;
+        display: flex;
+        justify-content: space-evenly;
+        p{
+            display: inline;
+            margin: 0 20px;
+            font-size: 1em;
+        }
+    }
+
+    .game-list-group{
+        margin-top: 10px;
+    }
+}
+
+.game-information-pop{
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0s;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.prediction-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.prediction-badge{
+    border-radius: 2em;
+    &[data-playerName="Logan"]{
+        background: darkblue;
+    }
+    &[data-playerName="Nick"]{
+        background: darkorange;
+    }
+}
+
+.away-predictions{
+    border-right: white solid 1px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<div class="upcoming-games mt-3">
+    <div class="upcoming-games__header">
+        <h2 class="display-6">{{ title }}</h2>
+    </div>
+    <div class="content-wrapper">
+        <ng-container *ngIf="games.length === 0; else content">
+            <div class="upcoming-games__content">
+                <p>No games found</p>
+            </div>
+        </ng-container>
+        <ng-template #content>
+            <div class="upcoming-games__content">
+                <ul class="list-group">
+                    <app-game *ngFor="let game of games" [game]="game" [predictions]="getPredictionsForGame(game.id)"></app-game>
+                </ul>
+            </div>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Predictions Help</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5>Layout</h5>
+            <hr>
+            <p>Above the schedule will display the current team's name and the record you have predicted for them. The team on the right is the home team and the team on the left is the away team. The team that is bolded is the team's schedule that you are currently looking at.</p>
+            <img src="./assets/prediction_help_1.png" class="img-fluid" alt="Help Image">
+            <h5 class="mt-3">How to Predict</h5>
+            <hr>
+            <p>To make a prediction simply go through the team schedule and click on the name of the team that you think will win the game.</p>
+            <video width="100%" height="100%" autoplay muted loop>
+                <source src="./assets/prediction_help_2.mp4" type="video/mp4">
+                Unfortunately, your browser does not support the video tag.
+            </video>
+            <h5 class="mt-3">Saving Predictions</h5>
+            <hr>
+            <p>After you've gone through each team, and predicted every game, just press the save predictions button and a file will be downloaded.
+                This file will contain all of your predictions for the season, send this file to Logan to be entered into the system.
+            </p>
+            <video width="100%" height="100%" autoplay muted loop>
+                <source src="./assets/prediction_help_3.mp4" type="video/mp4">
+                Unfortunately, your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container text-center">
+
+    <div class="team-button-container">
+        <button class="btn btn-outline-secondary team-button" [class.active]="teamName === 'Pittsburgh Steelers'" (click)="changeTeamName('Pittsburgh Steelers')">Steelers</button>
+        <button class="btn btn-outline-success team-button" [class.active]="teamName === 'Philadelphia Eagles'" (click)="changeTeamName('Philadelphia Eagles')">Eagles</button>
+        <button class="btn btn-outline-danger team-button" [class.active]="teamName === 'New York Giants'" (click)="changeTeamName('New York Giants')">Giants</button>
+        <button class="btn btn-outline-light team-button" [class.active]="teamName === 'New England Patriots'" (click)="changeTeamName('New England Patriots')">Patriots</button>
+        <button class="btn btn-outline-warning team-button" [class.active]="teamName === 'Los Angeles Chargers'" (click)="changeTeamName('Los Angeles Chargers')">Chargers</button>
+        <button class="btn btn-outline-primary team-button" [class.active]="teamName === 'Dallas Cowboys'" (click)="changeTeamName('Dallas Cowboys')">Cowboys</button>
+    </div>
+
+    <button class="btn btn-success" (click)="savePredictions()">Download your Predictions</button>
+
+    <h2 class="page-subtitle">{{ teamName }} 
+        <a class="help" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="playVideos()">
+           <i class="bi bi-question-circle"></i>
+        </a></h2>
+    <p class="lead record">{{ wins }} - {{ losses }}</p>
+    <div class="content-wrapper scrollable">
+        <ul class="list-group prediction-list">
+            <ng-container *ngFor="let game of getAllGames()">
+                <app-game-predict [game]="game" (gamePredicted)="updateRecord($event)" [currentTeam]="teamName" [prediction]="getPredictionForGame(game.id)"></app-game-predict>
+            </ng-container>
+        </ul>
+    </div>
+</div>

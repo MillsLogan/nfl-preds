@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ teamName }}</h1>
+            <p class="lead">{{ wins }} - {{ losses }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-5 table-responsive">
+            <app-team-leaderboard [teamName]="teamName" [teamSchedule]="teamSchedule"></app-team-leaderboard>
+        </div>
+        <div class="col-lg-7 scrollable">
+            <app-games-list [title]="'Schedule'" [games]="teamSchedule"></app-games-list>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="/"><img src="/assets/icon.png" class="icon">Football Predictions</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Football Predictions</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <a class="nav-link" data-bs-dismiss="offcanvas" [class.active]="activePage === 'home'" routerLink="/">
+                      Home
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" [class.active]="activePage === 'team'" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Teams
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/steelers">Steelers</a></li>
+                    <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/cowboys">Cowboys</a></li>
+                    <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/giants">Giants</a></li>
+                    <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/eagles">Eagles</a></li>
+                    <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/patriots">Patriots</a></li>
+                    <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/chargers">Chargers</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas" [class.active]="activePage === 'predict'" routerLink="/predict">
+                      Make Predictions
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+</div>

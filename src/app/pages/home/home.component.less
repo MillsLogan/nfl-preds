@@ -1,0 +1,30 @@
+.row{
+    justify-content: center;
+    align-content: center;
+    flex-direction: row-reverse;
+}
+
+[class^="col-"]{
+    align-content: center;
+    flex-grow: 1;
+}
+
+[class*="-container"]{
+    flex-grow: 1;
+}
+
+.main-container{
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scrollbar-width: 0;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .main-container{
+        max-height: 100%;
+    }
+}
