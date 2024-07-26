@@ -70,6 +70,7 @@ export class PredictPageComponent {
     // Validate all predictions
     if(this.predictions.validatePredictions()){
       this.predictions.savePredictions();
+      alert("Predictions saved successfully! Please send the CSV file to Logan!")
     }else{
       alert("One or more of your predictions is invalid. Please fix them before saving.");
     }
