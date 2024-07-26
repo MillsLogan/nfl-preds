@@ -8,8 +8,8 @@ import { TaggedTemplateExpr } from '@angular/compiler';
 declare var gapi: any;
 
 
-const APIKEY: string = "";
-const SHEETID: string = "AIzaSyBdRF5JfDAWvs-nwT1UESo5nnZPS0L6aaY";
+const APIKEY: string = "AIzaSyBdRF5JfDAWvs-nwT1UESo5nnZPS0L6aaY";
+const SHEETID: string = "10QAbJKl5CWf0XjEPYWHMmhDDO8b2LCp-441bOKMTuFQ";
 const RANGE: string = "AllGames!A1:N92";
 const PREDICTION_START_INDEX: number = 6;
 const HEADER_ROW_COUNT: number = 1;
