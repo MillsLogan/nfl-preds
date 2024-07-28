@@ -4,7 +4,6 @@ import { Team } from '../team/team';
 import { Prediction } from '../prediction/prediction';
 import moment from 'moment';
 import { Player } from '../player/player';
-import { TaggedTemplateExpr } from '@angular/compiler';
 declare var gapi: any;
 
 
