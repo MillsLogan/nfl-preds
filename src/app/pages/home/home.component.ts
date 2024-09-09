@@ -16,9 +16,14 @@ import { LeaderboardComponent } from '../../components/leaderboard/leaderboard.c
 })
 
 export class HomeComponent {
+  private static filledRecords: boolean = false;
   constructor(public database: DatabaseService) {}
 
   getPlayers() {
+    if (HomeComponent.filledRecords) {
+      return this.database.getPlayers();
+    }
+    HomeComponent.filledRecords = true;
     let players = this.database.getPlayers();
     for (let game of this.database.getGames()) {
       if (game.winner === "" || game.winner === undefined) {
@@ -39,7 +44,7 @@ export class HomeComponent {
         }
       }
     }
-    return players
+    return players;
   }
 
   getUpcomingGames() {
