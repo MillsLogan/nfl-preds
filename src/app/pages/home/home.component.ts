@@ -21,14 +21,21 @@ export class HomeComponent {
   getPlayers() {
     let players = this.database.getPlayers();
     for (let game of this.database.getGames()) {
+      if (game.winner === "" || game.winner === undefined) {
+        continue;
+      }
       for (let prediction of this.database.getPredictionsForGame(game.id)) {
+        if (prediction.winner === "" || prediction.winner === undefined) {
+          continue;
+        }
         let player = players.find(player => player.name === prediction.playerName);
         if (player === undefined) {
           continue;
         }
-
         if (prediction.winner === game.winner) {
           player.correct += 1;
+        }else {
+          player.incorrect += 1;
         }
       }
     }
