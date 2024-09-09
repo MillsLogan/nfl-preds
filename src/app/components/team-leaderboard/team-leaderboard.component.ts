@@ -19,14 +19,17 @@ export class TeamLeaderboardComponent implements OnInit, OnChanges {
 
   constructor(private database: DatabaseService) {
     this.initRecords();
+    this.sortPlayers();
   }
 
   ngOnInit() {
     this.initRecords();
+    this.sortPlayers();
   }
 
   ngOnChanges() {
     this.initRecords();
+    this.sortPlayers();
   }
 
   private initRecords() {
@@ -36,7 +39,7 @@ export class TeamLeaderboardComponent implements OnInit, OnChanges {
 
     this.teamSchedule.forEach(game => {
       this.database.getPredictionsForGame(game.id).forEach(prediction => {        
-        if(this.playerPredictions[prediction.playerName] === undefined){
+        if(this.playerPredictions[prediction.playerName] === undefined || prediction.winner === ""){
           return;
         }
 
@@ -57,5 +60,26 @@ export class TeamLeaderboardComponent implements OnInit, OnChanges {
 
   public getPlayers(){
     return Object.keys(this.playerPredictions);
+  }
+
+  private sortPlayers(){
+    let players = Object.keys(this.playerPredictions);
+    players.sort((a, b) => {
+      let playerA = this.playerPredictions[a];
+      let playerB = this.playerPredictions[b];
+      if(playerA.correct > playerB.correct){
+        return -1;
+      }else if(playerA.correct < playerB.correct){
+        return 1;
+      }else{
+        return 0;
+      }});
+      let newPlayerRecord: {[playerName: string]: {wins: number, losses: number, correct: number, incorrect: number}} = {};
+      for (let i = 0; i < players.length; i++) {
+        let player = players[i];
+        let playerRecord = this.playerPredictions[player];
+        newPlayerRecord[player] = playerRecord;
+      }
+      this.playerPredictions = newPlayerRecord;
   }
 }
