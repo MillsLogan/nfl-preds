@@ -2,7 +2,7 @@
 <main class="container">
     <div class="row right-justify">
       <div class="col-lg-4 p-3">
-        <app-leaderboard [players]="database.getPlayers()"></app-leaderboard>
+        <app-leaderboard [players]="getPlayers()"></app-leaderboard>
       </div>
       <div class="col-xl-8 main-container p-2">
         <app-games-list [games]="getUpcomingGames()" [title]="'Upcoming Games'"></app-games-list>

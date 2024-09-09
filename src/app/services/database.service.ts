@@ -17,7 +17,6 @@ const HEADER_ROW_COUNT: number = 1;
   providedIn: 'root'
 })
 
-
 export class DatabaseService {
   private games: { [id: number]: Game }= {};
   private predictions: {[gameId: number]: {[playername: string]: Prediction}} = {};
