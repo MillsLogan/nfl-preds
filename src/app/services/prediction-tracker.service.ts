@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
-const NUMBER_OF_GAMES: number = 91;
+const NUMBER_OF_GAMES: number = 5;
+const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz-InjLxtyvK6cJoN2aSs2Le54ZJuKPLMDTCYlnEhsJSoUQ7nKdMyFRqUwLcBrUS4qV/exec";
 
 @Injectable({
   providedIn: 'root'
@@ -47,6 +48,46 @@ export class PredictionTrackerService {
       return false;
     }
     return true;
+  }
+
+  checkIfPlayerExists(playerName: string): boolean {
+    console.log(this.database.getPlayers());
+    for (let player of this.database.getPlayers()) {
+      if (player.name === playerName) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  setPlayerName(playerName: string): string | null {
+    if (playerName === null || playerName === "") {
+      return "Please enter a valid name.";
+    }
+
+    for (let prediction of Object.values(this.predictions)) {
+      prediction.playerName = playerName;
+    }
+
+    return null;
+  }
+
+  sendPredictions() {
+    fetch(POST_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain', // prevents preflight request not ideal but works
+      },
+      body: JSON.stringify(this.predictions)
+    }).then(response => {
+      console.log(response);
+      if (response.ok) {
+        alert('Predictions saved successfully');
+        window.location.href = '/'; // Redirect to the home page
+      } else {
+        alert('Error saving predictions');
+      }
+    })
   }
 
   savePredictions() {

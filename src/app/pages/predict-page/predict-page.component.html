@@ -48,7 +48,7 @@
         <button class="btn btn-outline-primary team-button" [class.active]="teamName === 'Dallas Cowboys'" (click)="changeTeamName('Dallas Cowboys')">Cowboys</button>
     </div>
 
-    <button class="btn btn-success" (click)="savePredictions()">Download your Predictions</button>
+    <button class="btn btn-success" (click)="sendPredictions()">Submit Your Predictions</button>
 
     <h2 class="page-subtitle">{{ teamName }} 
         <a class="help" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="playVideos()">

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { DatabaseService } from '../../services/database.service';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent} from '../../components/navbar/navbar.component';
 import { GamesListComponent } from '../../components/games-list/games-list.component';
 import { LeaderboardComponent } from '../../components/leaderboard/leaderboard.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, GamesListComponent,
+  imports: [CommonModule, GamesListComponent,
     LeaderboardComponent
   ],
   templateUrl: './home.component.html',

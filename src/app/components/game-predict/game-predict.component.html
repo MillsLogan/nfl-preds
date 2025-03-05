@@ -3,7 +3,7 @@
         <div class="col-md-2 game-info">
             <p class="game-info__week lead mx-auto">Week {{ game.week }}</p>
             <p class="game-info__date lead mx-auto">{{ game.date.format("MM/DD/YY")}}</p>
-            <p class="game-info__time lead mx-auto">{{ game.time }}</p>
+            <p class="game-info__time lead mx-auto">{{ game.date.format("HH:mm A") }}</p>
         </div>
         <div class="col-md-10 game-teams">
             <div class="row game-teams-row">

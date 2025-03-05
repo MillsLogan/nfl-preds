@@ -9,8 +9,9 @@ declare var gapi: any;
 const APIKEY: string = "AIzaSyBdRF5JfDAWvs-nwT1UESo5nnZPS0L6aaY";
 const SHEETID: string = "10QAbJKl5CWf0XjEPYWHMmhDDO8b2LCp-441bOKMTuFQ";
 const RANGE: string = "AllGames!A1:N92";
-const PREDICTION_START_INDEX: number = 6;
+const PREDICTION_START_INDEX: number = 7;
 const HEADER_ROW_COUNT: number = 1;
+const GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbxr0dPGU8x52-XtFuZ_B7H1FNcy8O7HmmezxOtZ7J8uujpHZSSMsMCBj02emTACB0pF/exec";
 
 @Injectable({
   providedIn: 'root'
@@ -83,28 +84,23 @@ export class DatabaseService {
     return Object.values(this.predictions);
   }
 
-  /*
-  * Extremely scuffed way to update the ready but the only way I could get it to work
-  */
   private async init() {
-    await gapi.load('client', () => this.fetchSheetData(SHEETID, RANGE).then(data => {this.initDB(data); this.ready = true;}));
-    let interval = setInterval(() => {
-      console.log(this.ready);
-    }, 1000);
-    while(!this.ready){
-      await new Promise(r => setTimeout(r, 1000));
-    }
-    clearInterval(interval);
+    const raw_sheet_data = await fetch(GET_ENDPOINT).then(response => response.json());
+    this.initDB(raw_sheet_data);
+    this.ready = true;
   }
 
   private initDB(data: any){
+    // Get the player names from the first row
     this.initPlayers(data[0].slice(PREDICTION_START_INDEX));
+    // Remove the header row and process the rest of the data
     this.initGamesAndPredictions(data.slice(HEADER_ROW_COUNT));
   }
 
   private initGamesAndPredictions(data: any) {
-    data.map((row: any, gameId: number) => {
-      let game = Game.fromSheetRow(gameId, row);
+    data.map((row: any) => {
+      let game = Game.fromSheetRow(row);
+      let gameId = game.id;
       this.games[gameId] = game;
 
       Object.keys(this.players).map((playerName, playerIndex) => {
@@ -120,19 +116,5 @@ export class DatabaseService {
       let player = new Player(playerNames[i], 0, 0);
       this.players[player.name] = player;
     }
-  }
-
-  private fetchSheetData(sheetID: string, range: string): Promise<any> {
-    return new Promise(async (resolve, reject) => {
-      await gapi.client.init({
-        'apiKey': APIKEY,
-      });
-
-      let response = await gapi.client.request({
-        'path': `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}`,
-      });
-
-      resolve(response.result.values);
-    })
   }
 }

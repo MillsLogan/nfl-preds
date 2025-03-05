@@ -11,7 +11,7 @@ import { GamesListComponent } from '../../components/games-list/games-list.compo
 @Component({
   selector: 'app-predict-page',
   standalone: true,
-  imports: [NavbarComponent, GamePredictComponent, CommonModule, GamesListComponent],
+  imports: [GamePredictComponent, CommonModule],
   templateUrl: './predict-page.component.html',
   styleUrl: './predict-page.component.less'
 })
@@ -64,6 +64,34 @@ export class PredictPageComponent {
     let record = this.predictions.getRecord(this.teamName);
     this.wins = record[0];
     this.losses = record[1];
+  }
+
+  sendPredictions() {
+    // Validate all predictions
+    if(this.predictions.validatePredictions()){
+      let playerName = prompt("Please enter your name:");
+      if(playerName === null || playerName === ""){
+        alert("Please enter a valid name.");
+        return;
+      }
+
+      if (this.predictions.checkIfPlayerExists(playerName)){
+        let confirmation = confirm("You have already submitted predictions. Are you sure you want to overwrite them?");
+        if (!confirmation){
+          return;
+        }
+      }
+      
+      let errorMessage = this.predictions.setPlayerName(playerName);
+      if(errorMessage !== null){
+        alert(errorMessage);
+        return;
+      }
+
+      this.predictions.sendPredictions();
+    }else{
+      alert("One or more of your predictions is invalid. Please fix them before sending.");
+    }
   }
 
   savePredictions() {

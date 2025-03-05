@@ -13,6 +13,6 @@ import { Prediction } from '../prediction/prediction';
 })
 export class GameComponent {
   
-  @Input() game: Game = new Game(-1, -1, moment("09-09-2021", "MM-DD-YYYY"), "", "", "", null);
+  @Input() game: Game = new Game(-1, -1, moment("09-09-2021", "MM-DD-YYYY"), "", "", null);
   @Input() predictions: Prediction[] = [];
 }
