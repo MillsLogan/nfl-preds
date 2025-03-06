@@ -7,11 +7,13 @@ import { GamePredictComponent } from '../../components/game-predict/game-predict
 import { PredictionTrackerService } from '../../services/prediction-tracker.service';
 import { Game } from '../../game/game';
 import { GamesListComponent } from '../../components/games-list/games-list.component';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-predict-page',
   standalone: true,
-  imports: [GamePredictComponent, CommonModule],
+  imports: [GamePredictComponent, CommonModule, FormsModule],
   templateUrl: './predict-page.component.html',
   styleUrl: './predict-page.component.less'
 })
@@ -21,6 +23,7 @@ export class PredictPageComponent {
   private teamSchedule: Game[] = [];
   public wins: number = 0;
   public losses: number = 0;
+  public name: string = "";
 
   constructor(private route: ActivatedRoute, 
     private database: DatabaseService,
@@ -38,8 +41,11 @@ export class PredictPageComponent {
       }
       
       this.teamSchedule = this.database.getTeamSchedule(this.teamName);
-      console.log(this.teamSchedule);
-    }
+  }
+
+  loadPredictions() {
+    
+  }
 
   getAllGames() {
     return this.teamSchedule.sort((a,b) => a.week - b.week);

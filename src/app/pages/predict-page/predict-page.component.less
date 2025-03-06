@@ -7,12 +7,48 @@
     }
 }
 
-.team-button-container{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px 0;
-    flex-wrap: wrap;
-    button{
-        margin: 5px;
+.team-button(@color) {
+    background-color: transparent;
+    color: white;
+    border: 3px solid @color;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    transition: 0.2s;
+    font-weight: bold;
+    border-radius: 5px;
+
+    &.active, &:hover{
+        background-color: @color;
+        color: black;
+        border: 3px solid black;
     }
+
+    &:hover {
+        box-shadow: 0 0 10px @color;
+    }
+}
+
+.steelers-button {
+    .team-button(#FFB612);
+}
+
+.eagles-button {
+    .team-button(#004C54);
+}
+
+.giants-button {
+    .team-button(#A71930 );
+}
+
+.patriots-button {
+    .team-button(#C60C30);
+}
+
+.chargers-button {
+    .team-button(#FFC20E);
+}
+
+.cowboys-button {
+    .team-button(#869397 );
 }
