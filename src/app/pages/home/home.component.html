@@ -1,12 +1,51 @@
-
-<main class="container">
-    <div class="row right-justify">
-      <div class="col-lg-4 p-3">
-        <app-leaderboard [players]="getPlayers()"></app-leaderboard>
-      </div>
-      <div class="col-xl-8 main-container p-2">
-        <app-games-list [games]="getUpcomingGames()" [title]="'Upcoming Games'"></app-games-list>
-        <app-games-list [games]="getRecentGames()" [title]="'Recent Games'"></app-games-list>
+<div class="hero-image text-center">
+  <div class="hero-text">
+    <h1 class="">{{ familyName }} Family Predictions</h1>
+  </div>
+</div>
+<div class="container-fluid teams-container">
+  <div class="row text-center">
+    <div class="col" routerLink="/team/steelers">
+      <div class="team-container">
+        <img src="/assets/steelers_logo.png" class="team-logo">
       </div>
     </div>
-  </main>
+    <div class="col">
+      <div class="team-container" routerLink="/team/eagles">
+        <img src="/assets/eagles_logo.png" class="team-logo">
+      </div>
+    </div>
+    <div class="col">
+      <div class="team-container" routerLink="/team/giants">
+        <img src="/assets/giants_logo.png" class="team-logo">
+      </div>
+    </div>
+    <div class="col">
+      <div class="team-container" routerLink="/team/cowboys">
+        <img src="/assets/cowboys_logo.png" class="team-logo">
+      </div>
+    </div>
+    <div class="col">
+      <div class="team-container" routerLink="/team/chargers">
+        <img src="/assets/chargers_logo.png" class="team-logo">
+      </div>
+    </div>
+    <div class="col">
+      <div class="team-container"  routerLink="/team/patriots">
+        <img src="/assets/patriots_logo.png" class="team-logo">
+      </div>
+    </div> 
+  </div>
+</div>
+
+<main class="container-fluid mx-auto text-center">
+  <div class="row right-justify">
+    <div class="col-lg-4 p-3">
+      <app-leaderboard [players]="getPlayers()"></app-leaderboard>
+    </div>
+    <div class="col-xl-8 main-container p-2">
+      <app-games-list [games]="getUpcomingGames()" [title]="'Upcoming Games'"></app-games-list>
+      <app-games-list [games]="getRecentGames()" [title]="'Recent Games'"></app-games-list>
+    </div>
+  </div>
+</main>

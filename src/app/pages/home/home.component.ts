@@ -3,12 +3,13 @@ import { DatabaseService } from '../../services/database.service';
 import { CommonModule } from '@angular/common';
 import { GamesListComponent } from '../../components/games-list/games-list.component';
 import { LeaderboardComponent } from '../../components/leaderboard/leaderboard.component';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, GamesListComponent,
-    LeaderboardComponent
+    LeaderboardComponent, RouterModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less'
@@ -16,6 +17,7 @@ import { LeaderboardComponent } from '../../components/leaderboard/leaderboard.c
 
 export class HomeComponent {
   private static filledRecords: boolean = false;
+  public familyName: string = "Mills";
   constructor(public database: DatabaseService) {}
 
   getPlayers() {
