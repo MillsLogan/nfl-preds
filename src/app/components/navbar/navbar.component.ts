@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+import { Team } from '../../team/team';
 
 @Component({
   selector: 'app-navbar',
@@ -12,4 +13,5 @@ import { Route, RouterModule } from '@angular/router';
 
 export class NavbarComponent {
   @Input() public activePage: string = 'home';
+  @Input() public teams: string[] = [];
 }

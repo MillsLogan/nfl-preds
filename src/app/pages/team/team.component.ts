@@ -5,12 +5,12 @@ import { Game } from '../../game/game';
 import { GamesListComponent } from '../../components/games-list/games-list.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TeamLeaderboardComponent } from '../../components/team-leaderboard/team-leaderboard.component';
-import { initZone } from 'zone.js/lib/zone-impl';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [NavbarComponent, GamesListComponent, TeamLeaderboardComponent],
+  imports: [NavbarComponent, GamesListComponent, TeamLeaderboardComponent, CommonModule],
   templateUrl: './team.component.html',
   styleUrl: './team.component.less'
 })
@@ -20,6 +20,11 @@ export class TeamComponent {
   public teamSchedule!: Game[];
   public wins: number = 0;
   public losses: number = 0;
+  public primaryColor: string = "#000000";
+  public secondaryColor: string = "#FFFFFF";
+  public teamLogo: string = "";
+  public teamAbbreviation: string = "";
+
 
   constructor(private route: ActivatedRoute, 
     private database: DatabaseService,
@@ -36,6 +41,7 @@ export class TeamComponent {
       this.wins = 0;
       this.losses = 0;
       let teamName = this.route.snapshot.paramMap.get('teamName');
+
       if (teamName !== null){
         let fullName = this.database.getFullTeamName(teamName);
         if (fullName !== undefined){
@@ -46,6 +52,12 @@ export class TeamComponent {
       }else{
         this.teamName = "Pittsburgh Steelers";
       }
+
+      const teamInformation = this.database.getTeamInformation(this.teamName);
+      this.primaryColor = teamInformation.primaryColor;
+      this.secondaryColor = teamInformation.secondaryColor;
+      this.teamLogo = teamInformation.logo;
+      this.teamAbbreviation = teamInformation.abbreviation;
 
       this.teamSchedule = this.database.getTeamSchedule(this.teamName).sort((a,b) => a.week - b.week);
       this.initRecord();

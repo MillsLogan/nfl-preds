@@ -17,7 +17,7 @@ export class GamePredictComponent {
   @Output() public gamePredicted: EventEmitter<Object> = new EventEmitter<Object>();
 
   constructor() {
-
+    
   }
 
   setPrediction(prediction: string) {

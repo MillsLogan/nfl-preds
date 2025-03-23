@@ -22,14 +22,14 @@
                 <div class="row">
                     <div class="col-6 prediction-container away-predictions">
                         <ng-container *ngFor="let prediction of predictions">
-                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.gameId === game.id && prediction.winner === game.away">
+                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.winner === game.away">
                                 {{prediction.playerName}}
                             </span>
                         </ng-container>
                     </div>
                     <div class="col-6 prediction-container home-predictions">
                         <ng-container *ngFor="let prediction of predictions">
-                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.gameId === game.id && prediction.winner === game.home">
+                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.winner === game.home">
                                 {{prediction.playerName}}
                             </span>
                         </ng-container>

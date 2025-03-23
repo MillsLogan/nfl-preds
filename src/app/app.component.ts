@@ -16,6 +16,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 })
 export class AppComponent {
   title = 'ngfootball';
+  millsTeams: string[] = ["steelers", "cowboys", "chargers", "patriots", "giants", "eagles"];
 
   constructor(public database: DatabaseService) {}
 }

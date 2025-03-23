@@ -21,12 +21,9 @@
               Teams
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/steelers">Steelers</a></li>
-              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/cowboys">Cowboys</a></li>
-              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/giants">Giants</a></li>
-              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/eagles">Eagles</a></li>
-              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/patriots">Patriots</a></li>
-              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" routerLink="/team/chargers">Chargers</a></li>
+              <ng-container *ngFor="let team of teams">
+                <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="['/team', team]">{{ team | titlecase }}</a></li>
+              </ng-container>
             </ul>
           </li>
           <li class="nav-item">

@@ -5,6 +5,7 @@ import { Prediction } from '../prediction/prediction';
 import moment from 'moment';
 import { Player } from '../player/player';
 import test_data from "../../data/testResponse.json";
+import team_data from "../../data/teams.json";
 
 const PREDICTION_START_INDEX: number = 6;
 const HEADER_ROW_COUNT: number = 1;
@@ -15,6 +16,14 @@ const WEEK_DATES: moment.Moment[] = [
   moment("2025-09-19")
 ]
 
+interface TeamInformation {
+  name: string;
+  city: string;
+  primaryColor: string;
+  secondaryColor: string;
+  logo: string;
+  abbreviation: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +33,7 @@ export class DatabaseService {
   private games: Game[] = [];
   private predictions: {[gameId: number]: {[playername: string]: Prediction}} = {};
   private players: { [name: string]: Player} = {};
-  private teams: Team[] = [new Team("Tampa Bay", "Buccaneers", [], 0, 0, 0), new Team("Dallas", "Cowboys", [], 0, 0, 0)];
+  private teams: TeamInformation[] = [];
   public currentWeek: number = 1;
   @Output() ready: boolean = false;
 
@@ -57,6 +66,16 @@ export class DatabaseService {
     }
 
     return undefined;
+  }
+
+  public getTeamInformation(teamName: string): TeamInformation {
+    let normName = this.normalizeTeamName(teamName);
+    for (let team of this.teams) {
+      if (normName === team.name.toLowerCase()) {
+        return team;
+      }
+    }
+    return this.teams[0];
   }
 
   /**
@@ -111,17 +130,12 @@ export class DatabaseService {
     return Object.values(this.games);
   }
 
-  getTeams(): Team[] {
-    return this.teams;
-  }
-
   getPredictions(): {[playername: string]: Prediction}[]{
     return Object.values(this.predictions);
   }
 
   private async init() {
     const response = test_data; // STUBBED FOR TESTING await fetch(GET_ENDPOINT).then(response => response.json());
-    console.log(response);
     this.initDB(response);
     
     this.ready = true;
@@ -131,6 +145,11 @@ export class DatabaseService {
     this.initGames(data.games);
     this.initPredictions(data.predictions);
     this.initPlayers(data.players);
+    this.initTeams();
+  }
+
+  private initTeams() {
+    this.teams = team_data.teams;
   }
 
   private initGames(data: any) {
@@ -138,8 +157,14 @@ export class DatabaseService {
     console.log(this.games);
   }
 
-  private initPredictions(data: any) {
-    this.predictions = data;
+  private initPredictions(data: { [gameId: string]: {[playerName: string]: string}}) {
+    for (const [gameId, predictionData] of Object.entries(data)) {
+      const numGameId = parseInt(gameId);
+      this.predictions[numGameId] = {};
+      for (const [playerName, prediction] of Object.entries(predictionData)) {
+        this.predictions[parseInt(gameId)][playerName] = new Prediction(playerName, numGameId, prediction);
+      }
+    }
   }
 
   private initPlayers(data: any) {
@@ -151,12 +176,10 @@ export class DatabaseService {
     for (const [gameId, predictionData] of Object.entries(this.predictions)) {
       for (const [playerName, prediction] of Object.entries(predictionData)) {
         const gameIdNum = parseInt(gameId);
-        if (this.games[gameIdNum].winner !== undefined && prediction.winner !== null) {
-          if (this.games[gameIdNum].winner === prediction.winner) {
-            this.players[playerName].correct++;
-          } else {
-            this.players[playerName].incorrect++;
-          }
+        if (this.games[gameIdNum].winner === prediction.winner) {
+          this.players[playerName].correct++;
+        } else if(this.games[gameIdNum].winner === this.games[gameIdNum].home || this.games[gameIdNum].winner === this.games[gameIdNum].away) {
+          this.players[playerName].incorrect++;
         }
       }
     }

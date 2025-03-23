@@ -15,8 +15,7 @@ import { DatabaseService } from '../../services/database.service';
 })
 export class GamesListComponent {
   @Input() public games: Game[] = [];
-  @Input() public title: string = "Upcoming Games";
-
+  
   constructor(private database: DatabaseService) {
 
   }

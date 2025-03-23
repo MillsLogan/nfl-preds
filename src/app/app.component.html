@@ -1,4 +1,4 @@
-<app-navbar [activePage]="'home'"></app-navbar>
+<app-navbar [activePage]="'home'" [teams]="millsTeams"></app-navbar>
 <ng-container *ngIf="!database.ready; else showPage">
   <app-loading></app-loading>
 </ng-container>
