@@ -49,10 +49,10 @@ export class HomeComponent {
   }
 
   getUpcomingGames() {
-    return this.database.getAllUpcomingGames(5);
+    return this.database.getWeekGames(this.database.getWeek());
   }
 
   getRecentGames() {
-    return this.database.getAllRecentGames(5);
+    return this.database.getWeekGames(this.database.getWeek() - 1);
   }
 }

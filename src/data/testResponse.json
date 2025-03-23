@@ -1,0 +1,121 @@
+{
+    "games": [
+      {
+        "gameId": 0,
+        "week": 1,
+        "date": "1899-12-31T01:00:00.000Z",
+        "away": "Dallas Cowboys",
+        "home": "Atlanta Falcons",
+        "winner": "Atlanta Falcons"
+      },
+      {
+        "gameId": 1,
+        "week": 2,
+        "date": "2025-03-05T13:00:00.000Z",
+        "away": "Dallas Cowboys",
+        "home": "Chicago Bears",
+        "winner": null
+      },
+      {
+        "gameId": 2,
+        "week": 3,
+        "date": "2025-03-05T13:00:00.000Z",
+        "away": "Detroit Lions",
+        "home": "Dallas Cowboys",
+        "winner": null
+      },
+      {
+        "gameId": 3,
+        "week": 4,
+        "date": "2025-03-05T13:00:00.000Z",
+        "away": "Cleveland Browns",
+        "home": "Dallas Cowboys",
+        "winner": null
+      },
+      {
+        "gameId": 4,
+        "week": 5,
+        "date": "2025-03-05T13:00:00.000Z",
+        "away": "Dallas Cowboys",
+        "home": "Chicago Bears",
+        "winner": null
+      }
+    ],
+    "players": [
+      {
+        "name": "Logan",
+        "color": "#FFB612"
+      },
+      {
+        "name": "Bernadette",
+        "color": "#32a852"
+      },
+      {
+        "name": "Mom",
+        "color": "#0080C6"
+      },
+      {
+        "name": "Dad",
+        "color": "#0a3291"
+      },
+      {
+        "name": "Taylor",
+        "color": "#a723c4"
+      },
+      {
+        "name": "Joey",
+        "color": "#063f25"
+      },
+      {
+        "name": "Nick",
+        "color": "#de7104"
+      }
+    ],
+    "predictions": {
+      "0": {
+        "Logan": "Dallas Cowboys",
+        "Bernadette": "Atlanta Falcons",
+        "Dad": "Atlanta Falcons",
+        "Mom": "Atlanta Falcons",
+        "Nick": "Dallas Cowboys",
+        "Joey": "Dallas Cowboys",
+        "Taylor": "Atlanta Falcons"
+      },
+      "1": {
+        "Logan": "Dallas Cowboys",
+        "Bernadette": "Dallas Cowboys",
+        "Dad": "Chicago Bears",
+        "Mom": "Chicago Bears",
+        "Nick": "Dallas Cowboys",
+        "Joey": "Dallas Cowboys",
+        "Taylor": "Chicago Bears"
+      },
+      "2": {
+        "Logan": "Detroit Lions",
+        "Bernadette": "Detroit Lions",
+        "Dad": "Dallas Cowboys",
+        "Mom": "Dallas Cowboys",
+        "Nick": "Dallas Cowboys",
+        "Joey": "Dallas Cowboys",
+        "Taylor": "Dallas Cowboys"
+      },
+      "3": {
+        "Logan": "Cleveland Browns",
+        "Bernadette": "Cleveland Browns",
+        "Dad": "Dallas Cowboys",
+        "Mom": "Dallas Cowboys",
+        "Nick": "Cleveland Browns",
+        "Joey": "Cleveland Browns",
+        "Taylor": "Dallas Cowboys"
+      },
+      "4": {
+        "Logan": "Dallas Cowboys",
+        "Bernadette": "Dallas Cowboys",
+        "Dad": "Buffalo Bills",
+        "Mom": "Buffalo Bills",
+        "Nick": "Dallas Cowboys",
+        "Joey": "Dallas Cowboys",
+        "Taylor": "Buffalo Bills"
+      }
+    }
+}

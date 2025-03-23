@@ -1,51 +1,61 @@
-<div class="hero-image text-center">
-  <div class="hero-text">
-    <h1 class="">{{ familyName }} Family Predictions</h1>
-  </div>
-</div>
-<div class="container-fluid teams-container">
-  <div class="row text-center">
-    <div class="col" routerLink="/team/steelers">
-      <div class="team-container">
-        <img src="/assets/steelers_logo.png" class="team-logo">
+<div class="header container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mt-3 mb-3 py-3">
+        <h1 class="display-2">Family Football Predictions</h1>
       </div>
     </div>
-    <div class="col">
-      <div class="team-container" routerLink="/team/eagles">
-        <img src="/assets/eagles_logo.png" class="team-logo">
-      </div>
-    </div>
-    <div class="col">
-      <div class="team-container" routerLink="/team/giants">
-        <img src="/assets/giants_logo.png" class="team-logo">
-      </div>
-    </div>
-    <div class="col">
-      <div class="team-container" routerLink="/team/cowboys">
-        <img src="/assets/cowboys_logo.png" class="team-logo">
-      </div>
-    </div>
-    <div class="col">
-      <div class="team-container" routerLink="/team/chargers">
-        <img src="/assets/chargers_logo.png" class="team-logo">
-      </div>
-    </div>
-    <div class="col">
-      <div class="team-container"  routerLink="/team/patriots">
-        <img src="/assets/patriots_logo.png" class="team-logo">
-      </div>
-    </div> 
   </div>
 </div>
 
-<main class="container-fluid mx-auto text-center">
-  <div class="row right-justify">
+<div class="container-xl mx-auto text-center">
+  <div class="row flex-row-reverse align-items-start">
     <div class="col-lg-4 p-3">
       <app-leaderboard [players]="getPlayers()"></app-leaderboard>
     </div>
+
     <div class="col-xl-8 main-container p-2">
-      <app-games-list [games]="getUpcomingGames()" [title]="'Upcoming Games'"></app-games-list>
-      <app-games-list [games]="getRecentGames()" [title]="'Recent Games'"></app-games-list>
-    </div>
-  </div>
-</main>
+      <div class="accordion" id="gameDisplayAccordion">
+        <div class="accordion-item">
+          <h1 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLastWeek" aria-expanded="false" aria-controls="collapseLastWeek">
+              Last Week's Games (Week {{database.currentWeek - 1}})
+            </button>
+          </h1>
+          <div id="collapseLastWeek" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <app-games-list [games]="database.getWeekGames(database.currentWeek - 1)"></app-games-list>
+            </div>
+          </div>
+        </div><!--Close accordion item-->
+        <div class="accordion-item">
+          <h1 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThisWeek" aria-expanded="true" aria-controls="collapseThisWeek">
+              This Week's Games (Week {{database.currentWeek}})
+            </button>
+          </h1>
+          <div id="collapseThisWeek" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <app-games-list [games]="database.getWeekGames(database.currentWeek)"></app-games-list>
+            </div>
+          </div>
+        </div><!--Close accordion item-->
+        <div class="accordion-item">
+          <h1 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNextWeek" aria-expanded="false" aria-controls="collapseNextWeek">
+              Last Week's Games (Week {{database.currentWeek + 1}})
+            </button>
+          </h1>
+          <div id="collapseNextWeek" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <app-games-list [games]="database.getWeekGames(database.currentWeek + 1)"></app-games-list>
+            </div>
+          </div>
+        </div><!--Close accordion item-->
+      </div><!--Close accordion-->      
+    </div><!--Close game display container-->
+  </div><!--Close leaderboard and game display row-->
+</div><!--Close page container-->
+<!--
+-->
+

@@ -1,0 +1,189 @@
+{
+  "teams": [
+    {
+      "name": "Cardinals",
+      "city": "Arizona",
+      "abbreviation": "ARI",
+      "logo": "ARI_logo.png",
+      "primary_color": "#97233F",
+      "secondary_color": "#FFB612"
+    },
+    {
+      "name": "Falcons",
+      "city": "Atlanta",
+      "abbreviation": "ATL",
+      "logo": "ATL_logo.png",
+      "primary_color": "#A71930",
+      "secondary_color": "#000000"
+    },
+    {
+      "name": "Ravens",
+      "city": "Baltimore",
+      "abbreviation": "BAL",
+      "logo": "BAL_logo.png",
+      "primary_color": "#24135F",
+      "secondary_color": "#9E7C0C"
+    },
+    {
+      "name": "Bills",
+      "city": "Buffalo",
+      "abbreviation": "BUF",
+      "logo": "BUF_logo.png",
+      "primary_color": "#00338D",
+      "secondary_color": "#C60C30"
+    },
+    {
+      "name": "Panthers",
+      "city": "Carolina",
+      "abbreviation": "CAR",
+      "logo": "CAR_logo.png",
+      "primary_color": "#0085CA",
+      "secondary_color": "#101820"
+    },
+    {
+      "name": "Bears",
+      "city": "Chicago",
+      "abbreviation": "CHI",
+      "logo": "CHI_logo.png",
+      "primary_color": "#0B162A",
+      "secondary_color": "#C83803"
+    },
+    {
+      "name": "Bengals",
+      "city": "Cincinnati",
+      "abbreviation": "CIN",
+      "logo": "CIN_logo.png",
+      "primary_color": "#FB4F14",
+      "secondary_color": "#000000"
+    },
+    {
+      "name": "Browns",
+      "city": "Cleveland",
+      "abbreviation": "CLE",
+      "logo": "CLE_logo.png",
+      "primary_color": "#311D00",
+      "secondary_color": "#FF3C00"
+    },
+    {
+      "name": "Cowboys",
+      "city": "Dallas",
+      "abbreviation": "DAL",
+      "logo": "DAL_logo.png",
+      "primary_color": "#041E42",
+      "secondary_color": "#869397"
+    },
+    {
+      "name": "Broncos",
+      "city": "Denver",
+      "abbreviation": "DEN",
+      "logo": "DEN_logo.png",
+      "primary_color": "#FB4F14",
+      "secondary_color": "#002244"
+    },
+    {
+      "name": "Lions",
+      "city": "Detroit",
+      "abbreviation": "DET",
+      "logo": "DET_logo.png",
+      "primary_color": "#0076B6",
+      "secondary_color": "#B0B7BC"
+    },
+    {
+      "name": "Packers",
+      "city": "Green Bay",
+      "abbreviation": "GB",
+      "logo": "GB_logo.png",
+      "primary_color": "#203731",
+      "secondary_color": "#FFB612"
+    },
+    {
+      "name": "Texans",
+      "city": "Houston",
+      "abbreviation": "HOU",
+      "logo": "HOU_logo.png",
+      "primary_color": "#03202F",
+      "secondary_color": "#A71930"
+    },
+    {
+      "name": "Colts",
+      "city": "Indianapolis",
+      "abbreviation": "IND",
+      "logo": "IND_logo.png",
+      "primary_color": "#002C5F",
+      "secondary_color": "#A2AAAD"
+    },
+    {
+      "name": "Jaguars",
+      "city": "Jacksonville",
+      "abbreviation": "JAC",
+      "logo": "JAC_logo.png",
+      "primary_color": "#006778",
+      "secondary_color": "#D7A22A"
+    },
+    {
+      "name": "Chiefs",
+      "city": "Kansas City",
+      "abbreviation": "KC",
+      "logo": "KC_logo.png",
+      "primary_color": "#E31837",
+      "secondary_color": "#FFB612"
+    },
+    {
+      "name": "Raiders",
+      "city": "Las Vegas",
+      "abbreviation": "LV",
+      "logo": "LV_logo.png",
+      "primary_color": "#000000",
+      "secondary_color": "#A5ACAF"
+    },
+    {
+      "name": "Chargers",
+      "city": "Los Angeles",
+      "abbreviation": "LAC",
+      "logo": "LAC_logo.png",
+      "primary_color": "#0080C6",
+      "secondary_color": "#FFC20E"
+    },
+    {
+      "name": "Rams",
+      "city": "Los Angeles",
+      "abbreviation": "LAR",
+      "logo": "LAR_logo.png",
+      "primary_color": "#003594",
+      "secondary_color": "#FFA300"
+    },
+    {
+      "name": "Dolphins",
+      "city": "Miami",
+      "abbreviation": "MIA",
+      "logo": "MIA_logo.png",
+      "primary_color": "#008E97",
+      "secondary_color": "#FC4C02"
+    },
+    {
+      "name": "Vikings",
+      "city": "Minnesota",
+      "abbreviation": "MIN",
+      "logo": "MIN_logo.png",
+      "primary_color": "#4F2683",
+      "secondary_color": "#FFC62F"
+    },
+    {
+      "name": "Patriots",
+      "city": "New England",
+      "abbreviation": "NE",
+      "logo": "NE_logo.png",
+      "primary_color": "#002244",
+      "secondary_color": "#C60C30"
+    },
+    {
+      "name": "Saints",
+      "city": "New Orleans",
+      "abbreviation": "NO",
+      "logo": "NO_logo.png",
+      "primary_color": "#D3BC8D",
+      "secondary_color": "#101820"
+    }
+  ]
+}
+  

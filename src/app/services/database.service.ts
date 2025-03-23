@@ -4,24 +4,39 @@ import { Team } from '../team/team';
 import { Prediction } from '../prediction/prediction';
 import moment from 'moment';
 import { Player } from '../player/player';
+import test_data from "../../data/testResponse.json";
 
 const PREDICTION_START_INDEX: number = 6;
 const HEADER_ROW_COUNT: number = 1;
 const GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbxr0dPGU8x52-XtFuZ_B7H1FNcy8O7HmmezxOtZ7J8uujpHZSSMsMCBj02emTACB0pF/exec";
+const WEEK_DATES: moment.Moment[] = [
+  moment("2024-09-05"),
+  moment("2024-09-12"),
+  moment("2025-09-19")
+]
+
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DatabaseService {
-  private games: { [id: number]: Game }= {};
+  private games: Game[] = [];
   private predictions: {[gameId: number]: {[playername: string]: Prediction}} = {};
-  private players: { [id: string]: Player} = {};
+  private players: { [name: string]: Player} = {};
   private teams: Team[] = [new Team("Tampa Bay", "Buccaneers", [], 0, 0, 0), new Team("Dallas", "Cowboys", [], 0, 0, 0)];
+  public currentWeek: number = 1;
   @Output() ready: boolean = false;
 
   constructor() {
     this.init();
+    const today = moment().startOf("day");
+    for (const weekStartDate of WEEK_DATES) {
+      if (today.isBefore(weekStartDate)) {
+        break;
+      }
+      this.currentWeek++;
+    }
   }
 
   /**
@@ -66,30 +81,12 @@ export class DatabaseService {
     return splitArray[splitArray.length - 1];
   }
 
-  /**
-   * Returns games that have not happened yet up to a certain limit
-   * @param limit 
-   * @returns a list of the soonest games that have not happened yet
-   * @example getAllUpcomingGames(3) => [Game, Game, Game]
-   */
-  getAllUpcomingGames(limit: number): Game[] {
-    let upcomingGames: Game[] = Object.values(this.games);
-    upcomingGames = upcomingGames.filter(game => game.date.isAfter(moment()));
-    upcomingGames.sort((a, b) => a.date.diff(b.date));
-    return upcomingGames.slice(0, limit);
+  public getWeek(): number {
+    return this.currentWeek;
   }
 
-  /**
-   * Returns games that have already happened up to a certain limit
-   * @param limit 
-   * @returns a list of the most recent games that have already happened
-   * @example getAllRecentGames(3) => [Game, Game, Game]
-   */
-  getAllRecentGames(limit: number): Game[] {
-    let recentGames: Game[] = Object.values(this.games);
-    recentGames = recentGames.filter(game => game.date.isBefore(moment()));
-    recentGames.sort((a, b) => b.date.diff(a.date));
-    return recentGames.slice(0, limit);
+  public getWeekGames(week: number): Game[] {
+    return Object.values(this.games).filter(game => game.week === week);
   }
 
   /**
@@ -123,36 +120,45 @@ export class DatabaseService {
   }
 
   private async init() {
-    const raw_sheet_data = await fetch(GET_ENDPOINT).then(response => response.json());
-    this.initDB(raw_sheet_data);
+    const response = test_data; // STUBBED FOR TESTING await fetch(GET_ENDPOINT).then(response => response.json());
+    console.log(response);
+    this.initDB(response);
+    
     this.ready = true;
   }
 
   private initDB(data: any){
-    // Get the player names from the first row
-    this.initPlayers(data[0].slice(PREDICTION_START_INDEX));
-    // Remove the header row and process the rest of the data
-    this.initGamesAndPredictions(data.slice(HEADER_ROW_COUNT));
+    this.initGames(data.games);
+    this.initPredictions(data.predictions);
+    this.initPlayers(data.players);
   }
 
-  private initGamesAndPredictions(data: any) {
-    data.map((row: any) => {
-      let game = Game.fromSheetRow(row);
-      let gameId = game.id;
-      this.games[gameId] = game;
-
-      Object.keys(this.players).map((playerName, playerIndex) => {
-        let prediction = new Prediction(playerName, gameId, row[PREDICTION_START_INDEX + playerIndex]);
-        this.predictions[gameId] = this.predictions[gameId] || {};
-        this.predictions[gameId][playerName] = prediction;
-      });
-    });
+  private initGames(data: any) {
+    this.games = data.map((game: any) => new Game(game.gameId, game.week, moment(game.date), game.away, game.home, game.winner));
+    console.log(this.games);
   }
 
-  private initPlayers(playerNames: string[]) {
-    for(let i = 0; i < playerNames.length; i++) {
-      let player = new Player(playerNames[i], 0, 0);
-      this.players[player.name] = player;
+  private initPredictions(data: any) {
+    this.predictions = data;
+  }
+
+  private initPlayers(data: any) {
+    for (const player of data) {
+      this.players[player.name] = new Player(player.name, player.color);
+    }
+
+
+    for (const [gameId, predictionData] of Object.entries(this.predictions)) {
+      for (const [playerName, prediction] of Object.entries(predictionData)) {
+        const gameIdNum = parseInt(gameId);
+        if (this.games[gameIdNum].winner !== undefined && prediction.winner !== null) {
+          if (this.games[gameIdNum].winner === prediction.winner) {
+            this.players[playerName].correct++;
+          } else {
+            this.players[playerName].incorrect++;
+          }
+        }
+      }
     }
   }
 }
