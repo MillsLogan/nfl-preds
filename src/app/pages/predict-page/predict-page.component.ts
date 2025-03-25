@@ -11,11 +11,12 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Team } from '../../team/team';
 import { TeamInformation } from '../../interfaces';
+import { SubmitPredictionsModalComponent } from "../../components/submit-predictions-modal/submit-predictions-modal.component";
 
 @Component({
   selector: 'app-predict-page',
   standalone: true,
-  imports: [GamePredictComponent, CommonModule, FormsModule],
+  imports: [GamePredictComponent, CommonModule, FormsModule, SubmitPredictionsModalComponent],
   templateUrl: './predict-page.component.html',
   styleUrl: './predict-page.component.less'
 })
@@ -26,7 +27,9 @@ export class PredictPageComponent {
   private teamSchedule: Game[] = [];
   public wins: number = 0;
   public losses: number = 0;
-  public name: string = "";
+  public showColor: boolean = true;
+  public readyToSubmit: boolean = false;
+  public playerName: string = "";
 
   constructor(private route: ActivatedRoute, 
     private database: DatabaseService,
@@ -46,8 +49,14 @@ export class PredictPageComponent {
       this.teamSchedule = this.database.getTeamSchedule(this.teamName);
   }
 
-  loadPredictions() {
-    
+  isReadyToSubmit() {
+    if (this.predictions.validatePredictions()){
+      if(this.playerName === null || this.playerName === ""){
+        this.readyToSubmit = false;
+      } else {
+        this.readyToSubmit = true;
+      }
+    }
   }
 
   getAllGames() {
@@ -75,32 +84,37 @@ export class PredictPageComponent {
     this.losses = record[1];
   }
 
-  sendPredictions() {
-    // Validate all predictions
+  changePlayerName(playerName: string) {
+    this.showColor = !this.predictions.checkIfPlayerExists(playerName);
+    this.playerName = playerName;
+
     if(this.predictions.validatePredictions()){
-      let playerName = prompt("Please enter your name:");
-      if(playerName === null || playerName === ""){
-        alert("Please enter a valid name.");
-        return;
+      if(this.playerName === null || this.playerName === ""){
+        this.readyToSubmit = false;
+      } else {
+        this.readyToSubmit = true;
       }
-
-      if (this.predictions.checkIfPlayerExists(playerName)){
-        let confirmation = confirm("You have already submitted predictions. Are you sure you want to overwrite them?");
-        if (!confirmation){
-          return;
-        }
-      }
-      
-      let errorMessage = this.predictions.setPlayerName(playerName);
-      if(errorMessage !== null){
-        alert(errorMessage);
-        return;
-      }
-
-      this.predictions.sendPredictions();
-    }else{
-      alert("One or more of your predictions is invalid. Please fix them before sending.");
+    } else {
+      this.readyToSubmit = false;
     }
+  }
+
+  sendPredictions(playerName: string, playerColor?: string) {
+    // Validate all predictions    
+    if (this.predictions.checkIfPlayerExists(playerName)){
+      let confirmation = confirm("You have already submitted predictions. Are you sure you want to overwrite them?");
+      if (!confirmation){
+        return;
+      }
+    }
+      
+    let errorMessage = this.predictions.setPlayerName(playerName);
+    if(errorMessage !== null){
+      alert(errorMessage);
+      return;
+    }
+
+    this.predictions.sendPredictions(playerColor);
   }
 
   savePredictions() {
@@ -119,4 +133,8 @@ export class PredictPageComponent {
       video.play();
     }
   }
+
+  activateModal() {
+  }
 }
+

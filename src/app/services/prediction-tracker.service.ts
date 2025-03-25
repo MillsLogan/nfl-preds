@@ -51,7 +51,6 @@ export class PredictionTrackerService {
   }
 
   checkIfPlayerExists(playerName: string): boolean {
-    console.log(this.database.getPlayers());
     for (let player of this.database.getPlayers()) {
       if (player.name === playerName) {
         return true;
@@ -72,8 +71,19 @@ export class PredictionTrackerService {
     return null;
   }
 
-  sendPredictions() {
-    console.log(this.predictions);
+  sendPredictions(color?: string | null) {
+    let postBody: {[key: string]: object | null} = {
+      "newPlayer": null,
+      "predictions": this.predictions
+    };
+
+    if (!this.checkIfPlayerExists(this.predictions[0].playerName)){
+      postBody["newPlayer"] = {
+        playerName: this.predictions[0].playerName,
+        color: color ?? "red"
+      }
+    }
+    console.log(postBody);
     return;
     fetch(POST_ENDPOINT, {
       method: 'POST',

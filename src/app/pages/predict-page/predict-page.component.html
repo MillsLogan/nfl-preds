@@ -55,6 +55,9 @@
     </div>
 </div>
 
+<app-submit-predictions-modal [playerName]="playerName" [showColor]="showColor" [submitCallback]="sendPredictions.bind(this)"
+(nameChange)="changePlayerName($event)" [readyToSubmit]="readyToSubmit"></app-submit-predictions-modal>
+
 <div class="container text-center">
     <h1 class="page-title display-3">Make Your Predictions</h1>
     <h2 class="page-subtitle display-5">{{ teamName }} 
@@ -74,6 +77,6 @@
     <div class="row gx-3 mt-5 mb-5">
         <button class="btn btn-primary mx-auto col-5 col-sm-5" data-bs-toggle="offcanvas" data-bs-target="#teamSelectionButtons">Switch Team</button>
 
-        <button class="btn btn-success mx-auto col-5 col-sm-5" (click)="sendPredictions()">Submit Predictions</button>
+        <button class="btn btn-success mx-auto col-5 col-sm-5" data-bs-toggle="modal" data-bs-target="#submitModal" (click)="isReadyToSubmit()">Submit Predictions</button>
     </div>
 </div>
