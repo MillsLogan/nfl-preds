@@ -5,6 +5,7 @@ import { GameComponent } from '../../game/game.component';
 import { CommonModule } from '@angular/common';
 import { Prediction } from '../../prediction/prediction';
 import { DatabaseService } from '../../services/database.service';
+import { Player } from '../../player/player';
 
 @Component({
   selector: 'app-games-list',
@@ -15,9 +16,9 @@ import { DatabaseService } from '../../services/database.service';
 })
 export class GamesListComponent {
   @Input() public games: Game[] = [];
+  public players: Player[] = this.database.getPlayers();
   
   constructor(private database: DatabaseService) {
-
   }
 
   getPredictionsForGame(gameId: number): Prediction[] {

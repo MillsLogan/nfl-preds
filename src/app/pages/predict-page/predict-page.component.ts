@@ -9,6 +9,8 @@ import { Game } from '../../game/game';
 import { GamesListComponent } from '../../components/games-list/games-list.component';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { Team } from '../../team/team';
+import { TeamInformation } from '../../interfaces';
 
 @Component({
   selector: 'app-predict-page',
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class PredictPageComponent {
+  public teams: TeamInformation[] = this.database.getMillsTeams();
   public teamName: string = "Steelers";
   private teamSchedule: Game[] = [];
   public wins: number = 0;

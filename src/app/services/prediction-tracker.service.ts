@@ -73,6 +73,8 @@ export class PredictionTrackerService {
   }
 
   sendPredictions() {
+    console.log(this.predictions);
+    return;
     fetch(POST_ENDPOINT, {
       method: 'POST',
       headers: {

@@ -183,7 +183,78 @@
       "logo": "NO_logo.png",
       "primaryColor": "#D3BC8D",
       "secondaryColor": "#101820"
+    },
+    {
+      "name": "Giants",
+      "city": "New York",
+      "abbreviation": "NYG",
+      "logo": "NYG_logo.png",
+      "primaryColor": "#0B2265",
+      "secondaryColor": "#A71930"
+    },
+    {
+      "name": "Jets",
+      "city": "New York",
+      "abbreviation": "NYJ",
+      "logo": "NYJ_logo.png",
+      "primaryColor": "#125740",
+      "secondaryColor": "#000000"
+    },
+    {
+      "name": "Eagles",
+      "city": "Philadelphia",
+      "abbreviation": "PHI",
+      "logo": "PHI_logo.png",
+      "primaryColor": "#004C54",
+      "secondaryColor": "#A5ACAF"
+    },
+    {
+      "name": "Steelers",
+      "city": "Pittsburgh",
+      "abbreviation": "PIT",
+      "logo": "PIT_logo.png",
+      "primaryColor": "#FFB612",
+      "secondaryColor": "#101820"
+    },
+    {
+      "name": "49ers",
+      "city": "San Francisco",
+      "abbreviation": "SF",
+      "logo": "SF_logo.png",
+      "primaryColor": "#AA0000",
+      "secondaryColor": "#B3995D"
+    },
+    {
+      "name": "Seahawks",
+      "city": "Seattle",
+      "abbreviation": "SEA",
+      "logo": "SEA_logo.png",
+      "primaryColor": "#002244",
+      "secondaryColor": "#69BE28"
+    },
+    {
+      "name": "Buccaneers",
+      "city": "Tampa Bay",
+      "abbreviation": "TB",
+      "logo": "TB_logo.png",
+      "primaryColor": "#D50A0A",
+      "secondaryColor": "#FF7900"
+    },
+    {
+      "name": "Titans",
+      "city": "Tennessee",
+      "abbreviation": "TEN",
+      "logo": "TEN_logo.png",
+      "primaryColor": "#0C2340",
+      "secondaryColor": "#4B92DB"
+    },
+    {
+      "name": "Commanders",
+      "city": "Washington",
+      "abbreviation": "WAS",
+      "logo": "WAS_logo.png",
+      "primaryColor": "#5A1414",
+      "secondaryColor": "#FFB612"
     }
   ]
 }
-  

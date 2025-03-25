@@ -8,7 +8,7 @@
         <ng-template #content>
             <div class="upcoming-games__content">
                 <ul class="list-group">
-                    <app-game *ngFor="let game of games" [game]="game" [predictions]="getPredictionsForGame(game.id)"></app-game>
+                    <app-game *ngFor="let game of games" [game]="game" [predictions]="getPredictionsForGame(game.id)" [players]="players"></app-game>
                 </ul>
             </div>
         </ng-template>

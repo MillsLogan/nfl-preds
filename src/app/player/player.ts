@@ -10,4 +10,10 @@ export class Player {
         this.correct = correct;
         this.incorrect = incorrect;
     }
+
+    get textColor(): string {
+        const [r, g, b] = this.color.slice(1).match(/.{1,2}/g)!.map(hex => parseInt(hex, 16));
+        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+        return brightness > 125 ? "black" : "white";
+    }
 }

@@ -6,6 +6,7 @@ import moment from 'moment';
 import { Player } from '../player/player';
 import test_data from "../../data/testResponse.json";
 import team_data from "../../data/teams.json";
+import { TeamInformation } from '../interfaces';
 
 const PREDICTION_START_INDEX: number = 6;
 const HEADER_ROW_COUNT: number = 1;
@@ -15,15 +16,6 @@ const WEEK_DATES: moment.Moment[] = [
   moment("2024-09-12"),
   moment("2025-09-19")
 ]
-
-interface TeamInformation {
-  name: string;
-  city: string;
-  primaryColor: string;
-  secondaryColor: string;
-  logo: string;
-  abbreviation: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -66,6 +58,17 @@ export class DatabaseService {
     }
 
     return undefined;
+  }
+
+  public getMillsTeams(): TeamInformation[] {
+    let millsTeams: String[] = ["steelers", "cowboys", "chargers", "patriots", "giants", "eagles"];
+    let teams: TeamInformation[] = [];
+    for (let team of this.teams) {
+      if (millsTeams.includes(team.name.toLowerCase())) {
+        teams.push(team);
+      }
+    }
+    return teams;
   }
 
   public getTeamInformation(teamName: string): TeamInformation {

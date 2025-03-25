@@ -22,14 +22,22 @@
                 <div class="row">
                     <div class="col-6 prediction-container away-predictions">
                         <ng-container *ngFor="let prediction of predictions">
-                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.winner === game.away">
+                            <span class="badge prediction-badge" 
+                                    [attr.data-playerName]="prediction.playerName" 
+                                    *ngIf="prediction.winner === game.away"
+                                    [ngStyle]="{'background-color': getPlayerColor(prediction.playerName), 'color': getPlayerTextColor(prediction.playerName)}"
+                            >
                                 {{prediction.playerName}}
                             </span>
                         </ng-container>
                     </div>
                     <div class="col-6 prediction-container home-predictions">
                         <ng-container *ngFor="let prediction of predictions">
-                            <span class="badge prediction-badge" [attr.data-playerName]="prediction.playerName" *ngIf="prediction.winner === game.home">
+                            <span class="badge prediction-badge" 
+                                    [attr.data-playerName]="prediction.playerName" 
+                                    *ngIf="prediction.winner === game.home"
+                                    [ngStyle]="{'background-color': getPlayerColor(prediction.playerName), 'color': getPlayerTextColor(prediction.playerName)}"
+                            >
                                 {{prediction.playerName}}
                             </span>
                         </ng-container>

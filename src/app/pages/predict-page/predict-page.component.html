@@ -48,19 +48,16 @@
         Select a team to view their schedule and make predictions for the season.
       </div>
       <ul class="list-group text-center">
-        <li class="list-group-item steelers-button" [class.active]="teamName === 'Pittsburgh Steelers'" (click)="changeTeamName('Pittsburgh Steelers')" data-bs-dismiss="offcanvas">Steelers</li>
-        <li class="list-group-item eagles-button" [class.active]="teamName === 'Philadelphia Eagles'" (click)="changeTeamName('Philadelphia Eagles')" data-bs-dismiss="offcanvas">Eagles</li>
-        <li class="list-group-item giants-button" [class.active]="teamName === 'New York Giants'" (click)="changeTeamName('New York Giants')" data-bs-dismiss="offcanvas">Giants</li>
-        <li class="list-group-item cowboys-button" [class.active]="teamName === 'Dallas Cowboys'" (click)="changeTeamName('Dallas Cowboys')" data-bs-dismiss="offcanvas">Cowboys</li>
-        <li class="list-group-item chargers-button" [class.active]="teamName === 'Los Angeles Chargers'" (click)="changeTeamName('Los Angeles Chargers')" data-bs-dismiss="offcanvas">Chargers</li>
-        <li class="list-group-item patriots-button" [class.active]="teamName === 'New England Patriots'" (click)="changeTeamName('New England Patriots')" data-bs-dismiss="offcanvas">Patriots</li>
+        <ng-container *ngFor="let team of teams">
+            <li class="list-group-item" [ngClass]="team.name.toLowerCase() +'-button'" [class.active]="teamName === (team.city + ' ' + team.name)" (click)="changeTeamName(team.city + ' ' + team.name)" data-bs-dismiss="offcanvas">{{ team.city | titlecase }} {{ team.name | titlecase }}</li>
+        </ng-container>
       </ul>
     </div>
 </div>
 
 <div class="container text-center">
-    <h1 class="page-title">Make Your Predictions</h1>
-    <h2 class="page-subtitle">{{ teamName }} 
+    <h1 class="page-title display-3">Make Your Predictions</h1>
+    <h2 class="page-subtitle display-5">{{ teamName }} 
         <a class="help" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="playVideos()">
            <i class="bi bi-question-circle"></i>
         </a>
@@ -74,7 +71,7 @@
         </ul>
     </div>
 
-    <div class="row gx-3 mt-5">
+    <div class="row gx-3 mt-5 mb-5">
         <button class="btn btn-primary mx-auto col-5 col-sm-5" data-bs-toggle="offcanvas" data-bs-target="#teamSelectionButtons">Switch Team</button>
 
         <button class="btn btn-success mx-auto col-5 col-sm-5" (click)="sendPredictions()">Submit Predictions</button>
