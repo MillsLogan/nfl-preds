@@ -1,0 +1,21 @@
+<div class="container text-center mt-2">
+    <h1 class="page-title display-3">Week View </h1>
+    <div class="row justify-content-center align-items-center">
+        <div class="dropdown text-center">
+            <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Week {{ weekNumber }}
+            </button>
+            <ul class="dropdown-menu">
+                <ng-container *ngFor="let week of getWeekNumbers()">
+                    <li><a class="dropdown-item text-center" (click)="changeWeek(week)" data-bs-dismiss="offcanvas">{{ week }}</a></li>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="col-lg-4 table-responsive">
+            <app-leaderboard [players]="getPlayerScores()"></app-leaderboard>
+        </div>
+        <div class="col-lg-8 scrollable">
+            <app-games-list [title]="'Schedule'" [games]="weekGames"></app-games-list>
+        </div>
+    </div>
+</div>

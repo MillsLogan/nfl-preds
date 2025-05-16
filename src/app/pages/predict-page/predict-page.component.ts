@@ -1,17 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../../services/database.service';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { GamePredictComponent } from '../../components/game-predict/game-predict.component';
 import { PredictionTrackerService } from '../../services/prediction-tracker.service';
 import { Game } from '../../game/game';
-import { GamesListComponent } from '../../components/games-list/games-list.component';
-import { bootstrapApplication } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { Team } from '../../team/team';
 import { TeamInformation } from '../../interfaces';
 import { SubmitPredictionsModalComponent } from "../../components/submit-predictions-modal/submit-predictions-modal.component";
+import moment from 'moment';
 
 @Component({
   selector: 'app-predict-page',
@@ -60,7 +57,21 @@ export class PredictPageComponent {
   }
 
   getAllGames() {
-    return this.teamSchedule.sort((a,b) => a.week - b.week);
+    let allGames: Game[] = [];
+    this.teamSchedule.sort((a,b) => a.week - b.week);
+    for (let i = 0; i < this.teamSchedule.length; i++) {
+      if (i === 0) {
+        allGames.push(this.teamSchedule[i]);
+        continue;
+      }
+      if (this.teamSchedule[i].week - this.teamSchedule[i - 1].week > 1) {
+        let byeWeek = new Game(-1, 
+          i+1, moment(-1), "Bye", "Bye", "");
+        allGames.push(byeWeek);
+      }
+      allGames.push(this.teamSchedule[i]);
+    }
+    return allGames.sort((a,b) => a.week - b.week);
   }
 
   getPredictionForGame(gameId: number): string {
@@ -115,16 +126,8 @@ export class PredictPageComponent {
     }
 
     this.predictions.sendPredictions(playerColor);
-  }
-
-  savePredictions() {
-    // Validate all predictions
-    if(this.predictions.validatePredictions()){
-      this.predictions.savePredictions();
-      alert("Predictions saved successfully! Please send the CSV file to Logan!")
-    }else{
-      alert("One or more of your predictions is invalid. Please fix them before saving.");
-    }
+    window.location.href = "#home";
+    window.location.reload();
   }
 
   playVideos() {
@@ -135,6 +138,14 @@ export class PredictPageComponent {
   }
 
   activateModal() {
+  }
+
+  isTeamComplete(teamName: string): boolean {
+    let fullName = this.database.getFullTeamName(teamName);
+    if (fullName === undefined){
+      return false;
+    }
+    return this.predictions.isTeamComplete(fullName);
   }
 }
 

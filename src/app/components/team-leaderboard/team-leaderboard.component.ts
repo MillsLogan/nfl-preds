@@ -51,7 +51,7 @@ export class TeamLeaderboardComponent implements OnInit, OnChanges {
 
         if(prediction.winner === game.winner){
           this.playerPredictions[prediction.playerName].correct += 1;
-        }else if(game.winner !== ""){
+        }else if(game.winner !== "" && game.winner !== undefined && game.winner !== null){
           this.playerPredictions[prediction.playerName].incorrect += 1;
         }
       });

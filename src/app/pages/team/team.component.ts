@@ -3,14 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DatabaseService } from '../../services/database.service';
 import { Game } from '../../game/game';
 import { GamesListComponent } from '../../components/games-list/games-list.component';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TeamLeaderboardComponent } from '../../components/team-leaderboard/team-leaderboard.component';
 import { CommonModule } from '@angular/common';
+import moment from 'moment';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [NavbarComponent, GamesListComponent, TeamLeaderboardComponent, CommonModule],
+  imports: [GamesListComponent, TeamLeaderboardComponent, CommonModule],
   templateUrl: './team.component.html',
   styleUrl: './team.component.less'
 })
@@ -60,6 +60,16 @@ export class TeamComponent {
       this.teamAbbreviation = teamInformation.abbreviation;
 
       this.teamSchedule = this.database.getTeamSchedule(this.teamName).sort((a,b) => a.week - b.week);
+      this.teamSchedule.sort((a, b) => a.week - b.week);
+      for (let i = 1; i < this.teamSchedule.length; i++) {
+        if (this.teamSchedule[i].week - this.teamSchedule[i - 1].week > 1) {
+          let byeWeek = new Game(-1, 
+            i+1, moment(-1), "Bye", "Bye", "");
+          this.teamSchedule.push(byeWeek);
+          break;
+        }
+      }
+    this.teamSchedule.sort((a, b) => a.week - b.week);
       this.initRecord();
     }
 
@@ -73,7 +83,7 @@ export class TeamComponent {
     this.teamSchedule.forEach(game => {
       if (game.winner === this.teamName) {
         this.wins++;
-      } else if(game.winner !== ""){
+      } else if(game.winner !== "" && game.winner !== undefined && game.winner !== null){
         this.losses++;
       }
     });

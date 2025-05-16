@@ -7,14 +7,18 @@ export class Game {
     away: string;
     home: string;
     winner: string | null;
+    isInternational: boolean = false;
+    internationalLocation: string | null = null;
 
-    constructor(id: number, week: number, date: moment.Moment, away: string, home: string, winner: string | null) {
+    constructor(id: number, week: number, date: moment.Moment, away: string, home: string, winner: string | null, isInternational: boolean = false, internationalLocation: string | null = null) {
         this.id = id;
         this.week = week;
         this.date = date;
         this.away = away;
         this.home = home;
         this.winner = winner;
+        this.isInternational = isInternational;
+        this.internationalLocation = internationalLocation;
     }
 
     // static fromSheetRow(id: number, row: any): Game {
@@ -30,7 +34,7 @@ export class Game {
     //     return new Game(id, week, date, time, home, away, winner);
     // }
 
-    static fromSheetRow(row: [string, string, string, string, string, string, string]): Game {
+    static fromSheetRow(row: [string, string, string, string, string, string, string, string, string]): Game {
         let id = parseInt(row[0]);
         let week = parseInt(row[1]);
         console.log(row[2]);
@@ -41,6 +45,8 @@ export class Game {
         if(winner === ""){
             winner = null;
         }
-        return new Game(id, week, date, away, home, winner);
+        let isInternational = row[6] === "true";
+        let internationalLocation: string | null = row[7] === "" ? null : row[7];
+        return new Game(id, week, date, away, home, winner, isInternational, internationalLocation);
     }
 }

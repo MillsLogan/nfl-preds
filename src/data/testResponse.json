@@ -1,121 +1,2450 @@
 {
-    "games": [
-      {
-        "gameId": 0,
-        "week": 1,
-        "date": "1899-12-31T01:00:00.000Z",
-        "away": "Dallas Cowboys",
-        "home": "Atlanta Falcons",
-        "winner": "Atlanta Falcons"
-      },
-      {
-        "gameId": 1,
-        "week": 2,
-        "date": "2025-03-05T13:00:00.000Z",
-        "away": "Pittsburgh Steelers",
-        "home": "Chicago Bears",
-        "winner": null
-      },
-      {
-        "gameId": 2,
-        "week": 3,
-        "date": "2025-03-05T13:00:00.000Z",
-        "away": "Los Angeles Chargers",
-        "home": "Dallas Cowboys",
-        "winner": null
-      },
-      {
-        "gameId": 3,
-        "week": 4,
-        "date": "2025-03-05T13:00:00.000Z",
-        "away": "New England Patriots",
-        "home": "Dallas Cowboys",
-        "winner": null
-      },
-      {
-        "gameId": 4,
-        "week": 5,
-        "date": "2025-03-05T13:00:00.000Z",
-        "away": "Dallas Cowboys",
-        "home": "Chicago Bears",
-        "winner": null
-      }
-    ],
-    "players": [
-      {
-        "name": "Logan",
-        "color": "#FFB612"
-      },
-      {
-        "name": "Bernadette",
-        "color": "#32a852"
-      },
-      {
-        "name": "Mom",
-        "color": "#0080C6"
-      },
-      {
-        "name": "Dad",
-        "color": "#0a3291"
-      },
-      {
-        "name": "Taylor",
-        "color": "#a723c4"
-      },
-      {
-        "name": "Joey",
-        "color": "#063f25"
-      },
-      {
-        "name": "Nick",
-        "color": "#de7104"
-      }
-    ],
-    "predictions": {
-      "0": {
-        "Logan": "Dallas Cowboys",
-        "Bernadette": "Atlanta Falcons",
-        "Dad": "Atlanta Falcons",
-        "Mom": "Atlanta Falcons",
-        "Nick": "Dallas Cowboys",
-        "Joey": "Dallas Cowboys",
-        "Taylor": "Atlanta Falcons"
-      },
-      "1": {
-        "Logan": "Dallas Cowboys",
-        "Bernadette": "Dallas Cowboys",
-        "Dad": "Chicago Bears",
-        "Mom": "Chicago Bears",
-        "Nick": "Dallas Cowboys",
-        "Joey": "Dallas Cowboys",
-        "Taylor": "Chicago Bears"
-      },
-      "2": {
-        "Logan": "Detroit Lions",
-        "Bernadette": "Detroit Lions",
-        "Dad": "Dallas Cowboys",
-        "Mom": "Dallas Cowboys",
-        "Nick": "Dallas Cowboys",
-        "Joey": "Dallas Cowboys",
-        "Taylor": "Dallas Cowboys"
-      },
-      "3": {
-        "Logan": "Cleveland Browns",
-        "Bernadette": "Cleveland Browns",
-        "Dad": "Dallas Cowboys",
-        "Mom": "Dallas Cowboys",
-        "Nick": "Cleveland Browns",
-        "Joey": "Cleveland Browns",
-        "Taylor": "Dallas Cowboys"
-      },
-      "4": {
-        "Logan": "Dallas Cowboys",
-        "Bernadette": "Dallas Cowboys",
-        "Dad": "Buffalo Bills",
-        "Mom": "Buffalo Bills",
-        "Nick": "Dallas Cowboys",
-        "Joey": "Dallas Cowboys",
-        "Taylor": "Buffalo Bills"
-      }
+  "games": [
+    {
+      "gameId": 0,
+      "week": 1,
+      "date": "2025-09-07T17:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "New York Jets",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 1,
+      "week": 2,
+      "date": "2025-09-14T17:00:00.000Z",
+      "away": "Seattle Seahawks",
+      "home": "Pittsburgh Steelers",
+      "winner": "Seattle Seahawks",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 2,
+      "week": 3,
+      "date": "2025-09-21T17:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "New England Patriots",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 3,
+      "week": 4,
+      "date": "2025-09-28T13:30:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "Pittsburgh Steelers",
+      "winner": "Minnesota Vikings",
+      "isInternational": true,
+      "location": "Dublin, Ireland"
+    },
+    {
+      "gameId": 4,
+      "week": 6,
+      "date": "2025-10-12T17:00:00.000Z",
+      "away": "Cleveland Browns",
+      "home": "Pittsburgh Steelers",
+      "winner": "Cleveland Browns",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 5,
+      "week": 7,
+      "date": "2025-10-17T00:15:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Cincinnati Bengals",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 6,
+      "week": 8,
+      "date": "2025-10-27T00:20:00.000Z",
+      "away": "Green Bay Packers",
+      "home": "Pittsburgh Steelers",
+      "winner": "Green Bay Packers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 7,
+      "week": 9,
+      "date": "2025-11-02T18:00:00.000Z",
+      "away": "Indianapolis Colts",
+      "home": "Pittsburgh Steelers",
+      "winner": "Indianapolis Colts",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 8,
+      "week": 10,
+      "date": "2025-11-10T01:20:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Los Angeles Chargers",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 9,
+      "week": 11,
+      "date": "2025-11-16T18:00:00.000Z",
+      "away": "Cincinnati Bengals",
+      "home": "Pittsburgh Steelers",
+      "winner": "Cincinnati Bengals",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 10,
+      "week": 12,
+      "date": "2025-11-23T18:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Chicago Bears",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 11,
+      "week": 13,
+      "date": "2025-11-30T21:25:00.000Z",
+      "away": "Buffalo Bills",
+      "home": "Pittsburgh Steelers",
+      "winner": "Buffalo Bills",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 12,
+      "week": 14,
+      "date": "2025-12-07T18:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Baltimore Ravens",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 13,
+      "week": 15,
+      "date": "2025-12-16T01:15:00.000Z",
+      "away": "Miami Dolphins",
+      "home": "Pittsburgh Steelers",
+      "winner": "Miami Dolphins",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 14,
+      "week": 16,
+      "date": "2025-12-21T21:25:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Detroit Lions",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 15,
+      "week": 17,
+      "date": "2025-12-28T18:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Cleveland Browns",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 16,
+      "week": 18,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Baltimore Ravens",
+      "home": "Pittsburgh Steelers",
+      "winner": "Baltimore Ravens",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 17,
+      "week": 1,
+      "date": "2025-09-06T00:00:00.000Z",
+      "away": "Kansas City Chiefs",
+      "home": "Los Angeles Chargers",
+      "winner": "Kansas City Chiefs",
+      "isInternational": true,
+      "location": "Sao Paulo, Brazil"
+    },
+    {
+      "gameId": 18,
+      "week": 2,
+      "date": "2025-09-16T02:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Las Vegas Raiders",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 19,
+      "week": 3,
+      "date": "2025-09-21T20:05:00.000Z",
+      "away": "Denver Broncos",
+      "home": "Los Angeles Chargers",
+      "winner": "Denver Broncos",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 20,
+      "week": 4,
+      "date": "2025-09-28T17:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "New York Giants",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 21,
+      "week": 5,
+      "date": "2025-10-05T20:25:00.000Z",
+      "away": "Washington Commanders",
+      "home": "Los Angeles Chargers",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 22,
+      "week": 6,
+      "date": "2025-10-12T17:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Miami Dolphins",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 23,
+      "week": 7,
+      "date": "2025-10-19T20:05:00.000Z",
+      "away": "Indianapolis Colts",
+      "home": "Los Angeles Chargers",
+      "winner": "Indianapolis Colts",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 24,
+      "week": 8,
+      "date": "2025-10-24T00:15:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "Los Angeles Chargers",
+      "winner": "Minnesota Vikings",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 25,
+      "week": 9,
+      "date": "2025-10-02T17:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Tennessee Titans",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 26,
+      "week": 11,
+      "date": "2025-11-16T18:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Jacksonville Jaguars",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 27,
+      "week": 13,
+      "date": "2025-11-13T21:25:00.000Z",
+      "away": "Las Vegas Raiders",
+      "home": "Los Angeles Chargers",
+      "winner": "Las Vegas Raiders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 28,
+      "week": 14,
+      "date": "2025-12-09T01:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Los Angeles Chargers",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 29,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Kansas City Chiefs",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 30,
+      "week": 16,
+      "date": "2025-12-21T18:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Dallas Cowboys",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 31,
+      "week": 17,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Houston Texans",
+      "home": "Los Angeles Chargers",
+      "winner": "Houston Texans",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 32,
+      "week": 18,
+      "date": "2026-01-02T05:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Denver Broncos",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 33,
+      "week": 1,
+      "date": "2025-09-07T17:00:00.000Z",
+      "away": "Las Vegas Raiders",
+      "home": "New England Patriots",
+      "winner": "Las Vegas Raiders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 34,
+      "week": 2,
+      "date": "2025-09-14T17:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Miami Dolphins",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 35,
+      "week": 4,
+      "date": "2025-09-28T17:00:00.000Z",
+      "away": "Carolina Panthers",
+      "home": "New England Patriots",
+      "winner": "Carolina Panthers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 36,
+      "week": 5,
+      "date": "2025-10-06T00:20:00.000Z",
+      "away": "New England Patriots",
+      "home": "Buffalo Bills",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 37,
+      "week": 6,
+      "date": "2025-10-12T20:25:00.000Z",
+      "away": "New England Patriots",
+      "home": "New Orleans Saints",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 38,
+      "week": 7,
+      "date": "2025-10-19T17:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Tennessee Titans",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 39,
+      "week": 8,
+      "date": "2025-10-26T17:00:00.000Z",
+      "away": "Cleveland Browns",
+      "home": "New England Patriots",
+      "winner": "Cleveland Browns",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 40,
+      "week": 9,
+      "date": "2025-11-02T18:00:00.000Z",
+      "away": "Atlanta Falcons",
+      "home": "New England Patriots",
+      "winner": "Atlanta Falcons",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 41,
+      "week": 10,
+      "date": "2025-11-09T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Tampa Bay Buccaneers",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 42,
+      "week": 11,
+      "date": "2025-11-14T01:15:00.000Z",
+      "away": "New York Jets",
+      "home": "New England Patriots",
+      "winner": "New York Jets",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 43,
+      "week": 12,
+      "date": "2025-11-23T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Cincinnati Bengals",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 44,
+      "week": 13,
+      "date": "2025-12-02T01:15:00.000Z",
+      "away": "New York Giants",
+      "home": "New England Patriots",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 45,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Buffalo Bills",
+      "home": "New England Patriots",
+      "winner": "Buffalo Bills",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 46,
+      "week": 16,
+      "date": "2025-12-21T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Baltimore Ravens",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 47,
+      "week": 17,
+      "date": "2025-12-28T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "New York Jets",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 48,
+      "week": 18,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Miami Dolphins",
+      "home": "New England Patriots",
+      "winner": "Miami Dolphins",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 49,
+      "week": 1,
+      "date": "2025-09-07T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Washington Commanders",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 50,
+      "week": 2,
+      "date": "2025-09-14T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Dallas Cowboys",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 51,
+      "week": 3,
+      "date": "2025-09-22T00:20:00.000Z",
+      "away": "Kansas City Chiefs",
+      "home": "New York Giants",
+      "winner": "Kansas City Chiefs",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 52,
+      "week": 5,
+      "date": "2025-10-05T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "New Orleans Saints",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 53,
+      "week": 6,
+      "date": "2025-10-10T00:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "New York Giants",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 54,
+      "week": 7,
+      "date": "2025-10-19T20:05:00.000Z",
+      "away": "New York Giants",
+      "home": "Denver Broncos",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 55,
+      "week": 8,
+      "date": "2025-10-26T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Philadelphia Eagles",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 56,
+      "week": 9,
+      "date": "2025-11-02T18:00:00.000Z",
+      "away": "San Francisco 49ers",
+      "home": "New York Giants",
+      "winner": "San Francisco 49ers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 57,
+      "week": 10,
+      "date": "2025-11-09T18:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Chicago Bears",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 58,
+      "week": 11,
+      "date": "2025-11-16T18:00:00.000Z",
+      "away": "Green Bay Packers",
+      "home": "New York Giants",
+      "winner": "Green Bay Packers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 59,
+      "week": 12,
+      "date": "2025-11-23T18:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Detroit Lions",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 60,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Washington Commanders",
+      "home": "New York Giants",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 61,
+      "week": 16,
+      "date": "2025-12-21T18:00:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "New York Giants",
+      "winner": "Minnesota Vikings",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 62,
+      "week": 17,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Las Vegas Raiders",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 63,
+      "week": 18,
+      "date": "2026-01-02T05:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "New York Giants",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 64,
+      "week": 1,
+      "date": "2025-09-05T00:20:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Philadelphia Eagles",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 65,
+      "week": 2,
+      "date": "2025-09-14T20:25:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Kansas City Chiefs",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 66,
+      "week": 3,
+      "date": "2025-09-21T17:00:00.000Z",
+      "away": "Los Angeles Rams",
+      "home": "Philadelphia Eagles",
+      "winner": "Los Angeles Rams",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 67,
+      "week": 4,
+      "date": "2025-09-28T17:00:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Tampa Bay Buccaneers",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 68,
+      "week": 5,
+      "date": "2025-10-05T17:00:00.000Z",
+      "away": "Denver Broncos",
+      "home": "Philadelphia Eagles",
+      "winner": "Denver Broncos",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 69,
+      "week": 7,
+      "date": "2025-10-19T17:00:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Minnesota Vikings",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 70,
+      "week": 10,
+      "date": "2025-11-11T01:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Green Bay Packers",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 71,
+      "week": 11,
+      "date": "2025-11-17T01:20:00.000Z",
+      "away": "Detroit Lions",
+      "home": "Philadelphia Eagles",
+      "winner": "Detroit Lions",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 72,
+      "week": 12,
+      "date": "2025-11-23T21:25:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Dallas Cowboys",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 73,
+      "week": 13,
+      "date": "2025-11-28T20:00:00.000Z",
+      "away": "Chicago Bears",
+      "home": "Philadelphia Eagles",
+      "winner": "Chicago Bears",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 74,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Las Vegas Raiders",
+      "home": "Philadelphia Eagles",
+      "winner": "Las Vegas Raiders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 75,
+      "week": 16,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Washington Commanders",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 76,
+      "week": 17,
+      "date": "2025-12-28T21:25:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Buffalo Bills",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 77,
+      "week": 18,
+      "date": "2026-01-02T05:00:00.000Z",
+      "away": "Washington Commanders",
+      "home": "Philadelphia Eagles",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 78,
+      "week": 3,
+      "date": "2025-09-21T20:25:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Chicago Bears",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 79,
+      "week": 4,
+      "date": "2025-09-29T00:20:00.000Z",
+      "away": "Green Bay Packers",
+      "home": "Dallas Cowboys",
+      "winner": "Green Bay Packers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 80,
+      "week": 5,
+      "date": "2025-10-05T17:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "New York Jets",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 81,
+      "week": 6,
+      "date": "2025-10-12T17:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Carolina Panthers",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 82,
+      "week": 7,
+      "date": "2025-10-19T20:25:00.000Z",
+      "away": "Washington Commanders",
+      "home": "Dallas Cowboys",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 83,
+      "week": 8,
+      "date": "2025-10-26T20:25:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Denver Broncos",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 84,
+      "week": 9,
+      "date": "2025-11-04T01:15:00.000Z",
+      "away": "Arizona Cardinals",
+      "home": "Dallas Cowboys",
+      "winner": "Arizona Cardinals",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 85,
+      "week": 11,
+      "date": "2025-11-18T01:15:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Las Vegas Raiders",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 86,
+      "week": 13,
+      "date": "2025-11-27T21:30:00.000Z",
+      "away": "Kansas City Chiefs",
+      "home": "Dallas Cowboys",
+      "winner": "Kansas City Chiefs",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 87,
+      "week": 14,
+      "date": "2025-12-05T01:15:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Detroit Lions",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 88,
+      "week": 15,
+      "date": "2025-12-15T01:20:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "Dallas Cowboys",
+      "winner": "Minnesota Vikings",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 89,
+      "week": 17,
+      "date": "2025-12-25T18:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Washington Commanders",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
     }
+  ],
+  "players": [
+    {
+      "name": "Logan",
+      "color": "#FFB612"
+    },
+    {
+      "name": "Bernadette",
+      "color": "#32a852"
+    },
+    {
+      "name": "Taylor",
+      "color": "#a723c4"
+    }
+  ],
+  "predictions": {
+    "0": [
+      {
+        "gameID": 0,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 0,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 0,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "1": [
+      {
+        "gameID": 1,
+        "playerName": "Logan",
+        "predictedWinner": "Seattle Seahawks"
+      },
+      {
+        "gameID": 1,
+        "playerName": "Taylor",
+        "predictedWinner": "Seattle Seahawks"
+      },
+      {
+        "gameID": 1,
+        "playerName": "Bernadette",
+        "predictedWinner": "Seattle Seahawks"
+      }
+    ],
+    "2": [
+      {
+        "gameID": 2,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 2,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 2,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "3": [
+      {
+        "gameID": 3,
+        "playerName": "Logan",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 3,
+        "playerName": "Taylor",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 3,
+        "playerName": "Bernadette",
+        "predictedWinner": "Minnesota Vikings"
+      }
+    ],
+    "4": [
+      {
+        "gameID": 4,
+        "playerName": "Logan",
+        "predictedWinner": "Cleveland Browns"
+      },
+      {
+        "gameID": 4,
+        "playerName": "Taylor",
+        "predictedWinner": "Cleveland Browns"
+      },
+      {
+        "gameID": 4,
+        "playerName": "Bernadette",
+        "predictedWinner": "Cleveland Browns"
+      }
+    ],
+    "5": [
+      {
+        "gameID": 5,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 5,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 5,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "6": [
+      {
+        "gameID": 6,
+        "playerName": "Logan",
+        "predictedWinner": "Green Bay Packers"
+      },
+      {
+        "gameID": 6,
+        "playerName": "Taylor",
+        "predictedWinner": "Green Bay Packers"
+      },
+      {
+        "gameID": 6,
+        "playerName": "Bernadette",
+        "predictedWinner": "Green Bay Packers"
+      }
+    ],
+    "7": [
+      {
+        "gameID": 7,
+        "playerName": "Logan",
+        "predictedWinner": "Indianapolis Colts"
+      },
+      {
+        "gameID": 7,
+        "playerName": "Taylor",
+        "predictedWinner": "Indianapolis Colts"
+      },
+      {
+        "gameID": 7,
+        "playerName": "Bernadette",
+        "predictedWinner": "Indianapolis Colts"
+      }
+    ],
+    "8": [
+      {
+        "gameID": 8,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 8,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 8,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "9": [
+      {
+        "gameID": 9,
+        "playerName": "Logan",
+        "predictedWinner": "Cincinnati Bengals"
+      },
+      {
+        "gameID": 9,
+        "playerName": "Taylor",
+        "predictedWinner": "Cincinnati Bengals"
+      },
+      {
+        "gameID": 9,
+        "playerName": "Bernadette",
+        "predictedWinner": "Cincinnati Bengals"
+      }
+    ],
+    "10": [
+      {
+        "gameID": 10,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 10,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 10,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "11": [
+      {
+        "gameID": 11,
+        "playerName": "Logan",
+        "predictedWinner": "Buffalo Bills"
+      },
+      {
+        "gameID": 11,
+        "playerName": "Taylor",
+        "predictedWinner": "Buffalo Bills"
+      },
+      {
+        "gameID": 11,
+        "playerName": "Bernadette",
+        "predictedWinner": "Buffalo Bills"
+      }
+    ],
+    "12": [
+      {
+        "gameID": 12,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 12,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 12,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "13": [
+      {
+        "gameID": 13,
+        "playerName": "Logan",
+        "predictedWinner": "Miami Dolphins"
+      },
+      {
+        "gameID": 13,
+        "playerName": "Taylor",
+        "predictedWinner": "Miami Dolphins"
+      },
+      {
+        "gameID": 13,
+        "playerName": "Bernadette",
+        "predictedWinner": "Miami Dolphins"
+      }
+    ],
+    "14": [
+      {
+        "gameID": 14,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 14,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 14,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "15": [
+      {
+        "gameID": 15,
+        "playerName": "Logan",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 15,
+        "playerName": "Taylor",
+        "predictedWinner": "Pittsburgh Steelers"
+      },
+      {
+        "gameID": 15,
+        "playerName": "Bernadette",
+        "predictedWinner": "Pittsburgh Steelers"
+      }
+    ],
+    "16": [
+      {
+        "gameID": 16,
+        "playerName": "Logan",
+        "predictedWinner": "Baltimore Ravens"
+      },
+      {
+        "gameID": 16,
+        "playerName": "Taylor",
+        "predictedWinner": "Baltimore Ravens"
+      },
+      {
+        "gameID": 16,
+        "playerName": "Bernadette",
+        "predictedWinner": "Baltimore Ravens"
+      }
+    ],
+    "17": [
+      {
+        "gameID": 17,
+        "playerName": "Logan",
+        "predictedWinner": "Kansas City Chiefs"
+      },
+      {
+        "gameID": 17,
+        "playerName": "Taylor",
+        "predictedWinner": "Kansas City Chiefs"
+      },
+      {
+        "gameID": 17,
+        "playerName": "Bernadette",
+        "predictedWinner": "Kansas City Chiefs"
+      }
+    ],
+    "18": [
+      {
+        "gameID": 18,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 18,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 18,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "19": [
+      {
+        "gameID": 19,
+        "playerName": "Logan",
+        "predictedWinner": "Denver Broncos"
+      },
+      {
+        "gameID": 19,
+        "playerName": "Taylor",
+        "predictedWinner": "Denver Broncos"
+      },
+      {
+        "gameID": 19,
+        "playerName": "Bernadette",
+        "predictedWinner": "Denver Broncos"
+      }
+    ],
+    "20": [
+      {
+        "gameID": 20,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 20,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 20,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "21": [
+      {
+        "gameID": 21,
+        "playerName": "Logan",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 21,
+        "playerName": "Taylor",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 21,
+        "playerName": "Bernadette",
+        "predictedWinner": "Washington Commanders"
+      }
+    ],
+    "22": [
+      {
+        "gameID": 22,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 22,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 22,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "23": [
+      {
+        "gameID": 23,
+        "playerName": "Logan",
+        "predictedWinner": "Indianapolis Colts"
+      },
+      {
+        "gameID": 23,
+        "playerName": "Taylor",
+        "predictedWinner": "Indianapolis Colts"
+      },
+      {
+        "gameID": 23,
+        "playerName": "Bernadette",
+        "predictedWinner": "Indianapolis Colts"
+      }
+    ],
+    "24": [
+      {
+        "gameID": 24,
+        "playerName": "Logan",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 24,
+        "playerName": "Taylor",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 24,
+        "playerName": "Bernadette",
+        "predictedWinner": "Minnesota Vikings"
+      }
+    ],
+    "25": [
+      {
+        "gameID": 25,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 25,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 25,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "26": [
+      {
+        "gameID": 26,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 26,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 26,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "27": [
+      {
+        "gameID": 27,
+        "playerName": "Logan",
+        "predictedWinner": "Las Vegas Raiders"
+      },
+      {
+        "gameID": 27,
+        "playerName": "Taylor",
+        "predictedWinner": "Las Vegas Raiders"
+      },
+      {
+        "gameID": 27,
+        "playerName": "Bernadette",
+        "predictedWinner": "Las Vegas Raiders"
+      }
+    ],
+    "28": [
+      {
+        "gameID": 28,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 28,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 28,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "29": [
+      {
+        "gameID": 29,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 29,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 29,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "30": [
+      {
+        "gameID": 30,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 30,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 30,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "31": [
+      {
+        "gameID": 31,
+        "playerName": "Logan",
+        "predictedWinner": "Houston Texans"
+      },
+      {
+        "gameID": 31,
+        "playerName": "Taylor",
+        "predictedWinner": "Houston Texans"
+      },
+      {
+        "gameID": 31,
+        "playerName": "Bernadette",
+        "predictedWinner": "Houston Texans"
+      }
+    ],
+    "32": [
+      {
+        "gameID": 32,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 32,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Chargers"
+      },
+      {
+        "gameID": 32,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Chargers"
+      }
+    ],
+    "33": [
+      {
+        "gameID": 33,
+        "playerName": "Logan",
+        "predictedWinner": "Las Vegas Raiders"
+      },
+      {
+        "gameID": 33,
+        "playerName": "Taylor",
+        "predictedWinner": "Las Vegas Raiders"
+      },
+      {
+        "gameID": 33,
+        "playerName": "Bernadette",
+        "predictedWinner": "Las Vegas Raiders"
+      }
+    ],
+    "34": [
+      {
+        "gameID": 34,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 34,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 34,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "35": [
+      {
+        "gameID": 35,
+        "playerName": "Logan",
+        "predictedWinner": "Carolina Panthers"
+      },
+      {
+        "gameID": 35,
+        "playerName": "Taylor",
+        "predictedWinner": "Carolina Panthers"
+      },
+      {
+        "gameID": 35,
+        "playerName": "Bernadette",
+        "predictedWinner": "Carolina Panthers"
+      }
+    ],
+    "36": [
+      {
+        "gameID": 36,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 36,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 36,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "37": [
+      {
+        "gameID": 37,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 37,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 37,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "38": [
+      {
+        "gameID": 38,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 38,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 38,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "39": [
+      {
+        "gameID": 39,
+        "playerName": "Logan",
+        "predictedWinner": "Cleveland Browns"
+      },
+      {
+        "gameID": 39,
+        "playerName": "Taylor",
+        "predictedWinner": "Cleveland Browns"
+      },
+      {
+        "gameID": 39,
+        "playerName": "Bernadette",
+        "predictedWinner": "Cleveland Browns"
+      }
+    ],
+    "40": [
+      {
+        "gameID": 40,
+        "playerName": "Logan",
+        "predictedWinner": "Atlanta Falcons"
+      },
+      {
+        "gameID": 40,
+        "playerName": "Taylor",
+        "predictedWinner": "Atlanta Falcons"
+      },
+      {
+        "gameID": 40,
+        "playerName": "Bernadette",
+        "predictedWinner": "Atlanta Falcons"
+      }
+    ],
+    "41": [
+      {
+        "gameID": 41,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 41,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 41,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "42": [
+      {
+        "gameID": 42,
+        "playerName": "Logan",
+        "predictedWinner": "New York Jets"
+      },
+      {
+        "gameID": 42,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Jets"
+      },
+      {
+        "gameID": 42,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Jets"
+      }
+    ],
+    "43": [
+      {
+        "gameID": 43,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 43,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 43,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "44": [
+      {
+        "gameID": 44,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 44,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 44,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "45": [
+      {
+        "gameID": 45,
+        "playerName": "Logan",
+        "predictedWinner": "Buffalo Bills"
+      },
+      {
+        "gameID": 45,
+        "playerName": "Taylor",
+        "predictedWinner": "Buffalo Bills"
+      },
+      {
+        "gameID": 45,
+        "playerName": "Bernadette",
+        "predictedWinner": "Buffalo Bills"
+      }
+    ],
+    "46": [
+      {
+        "gameID": 46,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 46,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 46,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "47": [
+      {
+        "gameID": 47,
+        "playerName": "Logan",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 47,
+        "playerName": "Taylor",
+        "predictedWinner": "New England Patriots"
+      },
+      {
+        "gameID": 47,
+        "playerName": "Bernadette",
+        "predictedWinner": "New England Patriots"
+      }
+    ],
+    "48": [
+      {
+        "gameID": 48,
+        "playerName": "Logan",
+        "predictedWinner": "Miami Dolphins"
+      },
+      {
+        "gameID": 48,
+        "playerName": "Taylor",
+        "predictedWinner": "Miami Dolphins"
+      },
+      {
+        "gameID": 48,
+        "playerName": "Bernadette",
+        "predictedWinner": "Miami Dolphins"
+      }
+    ],
+    "49": [
+      {
+        "gameID": 49,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 49,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 49,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "50": [
+      {
+        "gameID": 50,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 50,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 50,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "51": [
+      {
+        "gameID": 51,
+        "playerName": "Logan",
+        "predictedWinner": "Kansas City Chiefs"
+      },
+      {
+        "gameID": 51,
+        "playerName": "Taylor",
+        "predictedWinner": "Kansas City Chiefs"
+      },
+      {
+        "gameID": 51,
+        "playerName": "Bernadette",
+        "predictedWinner": "Kansas City Chiefs"
+      }
+    ],
+    "52": [
+      {
+        "gameID": 52,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 52,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 52,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "53": [
+      {
+        "gameID": 53,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 53,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 53,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "54": [
+      {
+        "gameID": 54,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 54,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 54,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "55": [
+      {
+        "gameID": 55,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 55,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 55,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "56": [
+      {
+        "gameID": 56,
+        "playerName": "Logan",
+        "predictedWinner": "San Francisco 49ers"
+      },
+      {
+        "gameID": 56,
+        "playerName": "Taylor",
+        "predictedWinner": "San Francisco 49ers"
+      },
+      {
+        "gameID": 56,
+        "playerName": "Bernadette",
+        "predictedWinner": "San Francisco 49ers"
+      }
+    ],
+    "57": [
+      {
+        "gameID": 57,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 57,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 57,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "58": [
+      {
+        "gameID": 58,
+        "playerName": "Logan",
+        "predictedWinner": "Green Bay Packers"
+      },
+      {
+        "gameID": 58,
+        "playerName": "Taylor",
+        "predictedWinner": "Green Bay Packers"
+      },
+      {
+        "gameID": 58,
+        "playerName": "Bernadette",
+        "predictedWinner": "Green Bay Packers"
+      }
+    ],
+    "59": [
+      {
+        "gameID": 59,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 59,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 59,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "60": [
+      {
+        "gameID": 60,
+        "playerName": "Logan",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 60,
+        "playerName": "Taylor",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 60,
+        "playerName": "Bernadette",
+        "predictedWinner": "Washington Commanders"
+      }
+    ],
+    "61": [
+      {
+        "gameID": 61,
+        "playerName": "Logan",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 61,
+        "playerName": "Taylor",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 61,
+        "playerName": "Bernadette",
+        "predictedWinner": "Minnesota Vikings"
+      }
+    ],
+    "62": [
+      {
+        "gameID": 62,
+        "playerName": "Logan",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 62,
+        "playerName": "Taylor",
+        "predictedWinner": "New York Giants"
+      },
+      {
+        "gameID": 62,
+        "playerName": "Bernadette",
+        "predictedWinner": "New York Giants"
+      }
+    ],
+    "63": [
+      {
+        "gameID": 63,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 63,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 63,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "64": [
+      {
+        "gameID": 64,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 64,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 64,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "65": [
+      {
+        "gameID": 65,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 65,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 65,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "66": [
+      {
+        "gameID": 66,
+        "playerName": "Logan",
+        "predictedWinner": "Los Angeles Rams"
+      },
+      {
+        "gameID": 66,
+        "playerName": "Taylor",
+        "predictedWinner": "Los Angeles Rams"
+      },
+      {
+        "gameID": 66,
+        "playerName": "Bernadette",
+        "predictedWinner": "Los Angeles Rams"
+      }
+    ],
+    "67": [
+      {
+        "gameID": 67,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 67,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 67,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "68": [
+      {
+        "gameID": 68,
+        "playerName": "Logan",
+        "predictedWinner": "Denver Broncos"
+      },
+      {
+        "gameID": 68,
+        "playerName": "Taylor",
+        "predictedWinner": "Denver Broncos"
+      },
+      {
+        "gameID": 68,
+        "playerName": "Bernadette",
+        "predictedWinner": "Denver Broncos"
+      }
+    ],
+    "69": [
+      {
+        "gameID": 69,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 69,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 69,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "70": [
+      {
+        "gameID": 70,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 70,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 70,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "71": [
+      {
+        "gameID": 71,
+        "playerName": "Logan",
+        "predictedWinner": "Detroit Lions"
+      },
+      {
+        "gameID": 71,
+        "playerName": "Taylor",
+        "predictedWinner": "Detroit Lions"
+      },
+      {
+        "gameID": 71,
+        "playerName": "Bernadette",
+        "predictedWinner": "Detroit Lions"
+      }
+    ],
+    "72": [
+      {
+        "gameID": 72,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 72,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 72,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "73": [
+      {
+        "gameID": 73,
+        "playerName": "Logan",
+        "predictedWinner": "Chicago Bears"
+      },
+      {
+        "gameID": 73,
+        "playerName": "Taylor",
+        "predictedWinner": "Chicago Bears"
+      },
+      {
+        "gameID": 73,
+        "playerName": "Bernadette",
+        "predictedWinner": "Chicago Bears"
+      }
+    ],
+    "74": [
+      {
+        "gameID": 74,
+        "playerName": "Logan",
+        "predictedWinner": "Las Vegas Raiders"
+      },
+      {
+        "gameID": 74,
+        "playerName": "Taylor",
+        "predictedWinner": "Las Vegas Raiders"
+      },
+      {
+        "gameID": 74,
+        "playerName": "Bernadette",
+        "predictedWinner": "Las Vegas Raiders"
+      }
+    ],
+    "75": [
+      {
+        "gameID": 75,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 75,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 75,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "76": [
+      {
+        "gameID": 76,
+        "playerName": "Logan",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 76,
+        "playerName": "Taylor",
+        "predictedWinner": "Philadelphia Eagles"
+      },
+      {
+        "gameID": 76,
+        "playerName": "Bernadette",
+        "predictedWinner": "Philadelphia Eagles"
+      }
+    ],
+    "77": [
+      {
+        "gameID": 77,
+        "playerName": "Logan",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 77,
+        "playerName": "Taylor",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 77,
+        "playerName": "Bernadette",
+        "predictedWinner": "Washington Commanders"
+      }
+    ],
+    "78": [
+      {
+        "gameID": 78,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 78,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 78,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "79": [
+      {
+        "gameID": 79,
+        "playerName": "Logan",
+        "predictedWinner": "Green Bay Packers"
+      },
+      {
+        "gameID": 79,
+        "playerName": "Taylor",
+        "predictedWinner": "Green Bay Packers"
+      },
+      {
+        "gameID": 79,
+        "playerName": "Bernadette",
+        "predictedWinner": "Green Bay Packers"
+      }
+    ],
+    "80": [
+      {
+        "gameID": 80,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 80,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 80,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "81": [
+      {
+        "gameID": 81,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 81,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 81,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "82": [
+      {
+        "gameID": 82,
+        "playerName": "Logan",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 82,
+        "playerName": "Taylor",
+        "predictedWinner": "Washington Commanders"
+      },
+      {
+        "gameID": 82,
+        "playerName": "Bernadette",
+        "predictedWinner": "Washington Commanders"
+      }
+    ],
+    "83": [
+      {
+        "gameID": 83,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 83,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 83,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "84": [
+      {
+        "gameID": 84,
+        "playerName": "Logan",
+        "predictedWinner": "Arizona Cardinals"
+      },
+      {
+        "gameID": 84,
+        "playerName": "Taylor",
+        "predictedWinner": "Arizona Cardinals"
+      },
+      {
+        "gameID": 84,
+        "playerName": "Bernadette",
+        "predictedWinner": "Arizona Cardinals"
+      }
+    ],
+    "85": [
+      {
+        "gameID": 85,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 85,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 85,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "86": [
+      {
+        "gameID": 86,
+        "playerName": "Logan",
+        "predictedWinner": "Kansas City Chiefs"
+      },
+      {
+        "gameID": 86,
+        "playerName": "Taylor",
+        "predictedWinner": "Kansas City Chiefs"
+      },
+      {
+        "gameID": 86,
+        "playerName": "Bernadette",
+        "predictedWinner": "Kansas City Chiefs"
+      }
+    ],
+    "87": [
+      {
+        "gameID": 87,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 87,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 87,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ],
+    "88": [
+      {
+        "gameID": 88,
+        "playerName": "Logan",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 88,
+        "playerName": "Taylor",
+        "predictedWinner": "Minnesota Vikings"
+      },
+      {
+        "gameID": 88,
+        "playerName": "Bernadette",
+        "predictedWinner": "Minnesota Vikings"
+      }
+    ],
+    "89": [
+      {
+        "gameID": 89,
+        "playerName": "Logan",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 89,
+        "playerName": "Taylor",
+        "predictedWinner": "Dallas Cowboys"
+      },
+      {
+        "gameID": 89,
+        "playerName": "Bernadette",
+        "predictedWinner": "Dallas Cowboys"
+      }
+    ]
+  }
 }

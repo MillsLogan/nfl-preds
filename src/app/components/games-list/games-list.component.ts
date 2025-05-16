@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Prediction } from '../../prediction/prediction';
 import { DatabaseService } from '../../services/database.service';
 import { Player } from '../../player/player';
+import moment, { Moment } from 'moment';
 
 @Component({
   selector: 'app-games-list',
@@ -16,10 +17,12 @@ import { Player } from '../../player/player';
 })
 export class GamesListComponent {
   @Input() public games: Game[] = [];
+  @Input() public addByeWeek: boolean = false;
   public players: Player[] = this.database.getPlayers();
   
   constructor(private database: DatabaseService) {
   }
+
 
   getPredictionsForGame(gameId: number): Prediction[] {
     return this.database.getPredictionsForGame(gameId);

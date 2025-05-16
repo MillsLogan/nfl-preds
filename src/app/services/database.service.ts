@@ -8,13 +8,15 @@ import test_data from "../../data/testResponse.json";
 import team_data from "../../data/teams.json";
 import { TeamInformation } from '../interfaces';
 
-const PREDICTION_START_INDEX: number = 6;
-const HEADER_ROW_COUNT: number = 1;
-const GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbxr0dPGU8x52-XtFuZ_B7H1FNcy8O7HmmezxOtZ7J8uujpHZSSMsMCBj02emTACB0pF/exec";
+// const PREDICTION_START_INDEX: number = 6;
+// const HEADER_ROW_COUNT: number = 1;
+const GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbxV1i7zFOOTXpiSYv8FgCyndmdtsIDxpi9VCSL5WSusoCDzLsQO4lZ33pesf7_60VY/exec?table=games&table=players&table=predictions";
 const WEEK_DATES: moment.Moment[] = [
-  moment("2024-09-05"),
-  moment("2024-09-12"),
-  moment("2025-09-19")
+  moment("2025-09-04"),
+  moment("2025-09-11"),
+  moment("2025-09-18"),
+  moment("2025-09-25"),
+  moment("2025-10-02"),
 ]
 
 @Injectable({
@@ -118,6 +120,9 @@ export class DatabaseService {
    * @example getPrediction(1) => [Prediction, Prediction, Prediction]
    */
   getPredictionsForGame(gameId: number): Prediction[] {
+    if (this.predictions[gameId] === undefined) {
+      return [];
+    }
     return Object.values(this.predictions[gameId]);
   }
 
@@ -138,7 +143,8 @@ export class DatabaseService {
   }
 
   private async init() {
-    const response = test_data; // STUBBED FOR TESTING await fetch(GET_ENDPOINT).then(response => response.json());
+    // const response = test_data; // STUBBED FOR TESTING
+    const response = await fetch(GET_ENDPOINT).then(response => response.json());
     this.initDB(response);
     
     this.ready = true;
@@ -156,16 +162,15 @@ export class DatabaseService {
   }
 
   private initGames(data: any) {
-    this.games = data.map((game: any) => new Game(game.gameId, game.week, moment(game.date), game.away, game.home, game.winner));
-    console.log(this.games);
+    this.games = data.map((game: any) => new Game(game.gameId, game.week, moment(game.date), game.away, game.home, game.winner, game.isInternational, game.location));
   }
 
-  private initPredictions(data: { [gameId: string]: {[playerName: string]: string}}) {
+  private initPredictions(data: { [gameId: string]: {gameID: number, playerName: string, predictedWinner: string}[] }) {
     for (const [gameId, predictionData] of Object.entries(data)) {
       const numGameId = parseInt(gameId);
       this.predictions[numGameId] = {};
-      for (const [playerName, prediction] of Object.entries(predictionData)) {
-        this.predictions[parseInt(gameId)][playerName] = new Prediction(playerName, numGameId, prediction);
+      for (const prediction of Object.values(predictionData)) {
+        this.predictions[parseInt(gameId)][prediction.playerName] = new Prediction(prediction.playerName, numGameId, prediction.predictedWinner);
       }
     }
   }
@@ -175,14 +180,16 @@ export class DatabaseService {
       this.players[player.name] = new Player(player.name, player.color);
     }
 
-
+    console.log(this.predictions);
     for (const [gameId, predictionData] of Object.entries(this.predictions)) {
-      for (const [playerName, prediction] of Object.entries(predictionData)) {
+      for (const [playerName, predictionInfo] of Object.entries(predictionData)) {
         const gameIdNum = parseInt(gameId);
-        if (this.games[gameIdNum].winner === prediction.winner) {
-          this.players[playerName].correct++;
-        } else if(this.games[gameIdNum].winner === this.games[gameIdNum].home || this.games[gameIdNum].winner === this.games[gameIdNum].away) {
-          this.players[playerName].incorrect++;
+        if (this.games[gameIdNum].winner !== "" && this.games[gameIdNum].winner !== null && this.games[gameIdNum].winner !== undefined) {
+          if (this.games[gameIdNum].winner === predictionInfo.winner) {
+             this.players[playerName].correct++;
+          } else if(this.games[gameIdNum].winner === this.games[gameIdNum].home || this.games[gameIdNum].winner === this.games[gameIdNum].away) {
+            this.players[playerName].incorrect++;
+          }
         }
       }
     }

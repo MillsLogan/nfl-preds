@@ -6,18 +6,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="container" *ngIf="!readyToSubmit">
+         <div class="alert alert-danger mx-4" role="alert">You must make predictions for all games.</div>
+      </div>
         <form>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Enter Your Name</label>
             <input type="text" name="playerNameInput" class="form-control" id="recipient-name" [(ngModel)]="playerName" (ngModelChange)="nameChanged(playerName)">
           </div>
+          
           <div class="mb-3" [ngStyle]="{'display': showColor ? 'block' : 'none'}">
             <label for="color-select" class="col-form-label">Select Your Favorite Color</label>
             <input type="color" name="color-selection-input" class="form-control form-control-color" id="color-select" [(ngModel)]="colorSelection">
           </div>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="alert alert-info mx-4">If you still see a warning after entering your name, check all teams
+        have the <span class="badge bg-success rounded-pill">Complete</span> badge next to the team name.
+      </div>
+      <div class="modal-footer">  
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" (click)="submitCallback(playerName, colorSelection)" [ngClass]="readyToSubmit ? '' : 'disabled'">Submit Predictions</button>
       </div>

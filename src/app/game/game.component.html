@@ -1,9 +1,9 @@
-<li class="list-group-item game-list-group">
+<li class="list-group-item game-list-group" [class.international]="game.isInternational">
     <div class="row">
         <div class="col-md-2 game-info">
             <p class="game-info__week lead mx-auto">Week {{ game.week }}</p>
-            <p class="game-info__date lead mx-auto">{{ game.date.format("MM/DD/YY")}}</p>
-            <p class="game-info__time lead mx-auto">{{ game.date.format("HH:mm A") }}</p>
+            <p class="game-info__date lead mx-auto">{{ game.date.format("ddd MM/DD")}}</p>
+            <p class="game-info__time lead mx-auto">{{ game.date.format("hh:mm A") }}</p>
         </div>
         <div class="col-md-10 game-teams">
             <div class="row game-teams-row">
@@ -20,6 +20,9 @@
             <div class="game-information-pop">
                 <hr style="font-weight: bolder">
                 <div class="row">
+                    <div *ngIf="game.isInternational" class="col-12 game-information">
+                        This is an international game played in {{ game.internationalLocation }}
+                    </div>
                     <div class="col-6 prediction-container away-predictions">
                         <ng-container *ngFor="let prediction of predictions">
                             <span class="badge prediction-badge" 

@@ -16,7 +16,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 
 export class HomeComponent {
-  private static filledRecords: boolean = false;
+  private static filledRecords: boolean = true;
   public familyName: string = "Mills";
   constructor(public database: DatabaseService) {}
 

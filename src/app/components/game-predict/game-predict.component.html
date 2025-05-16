@@ -1,11 +1,14 @@
-<li class="list-group-item game-list-group">
+<li class="list-group-item game-list-group" [class.international]="game.isInternational">
     <div class="row">
         <div class="col-md-2 game-info">
             <p class="game-info__week lead mx-auto">Week {{ game.week }}</p>
             <p class="game-info__date lead mx-auto">{{ game.date.format("MM/DD/YY")}}</p>
             <p class="game-info__time lead mx-auto">{{ game.date.format("HH:mm A") }}</p>
         </div>
-        <div class="col-md-10 game-teams">
+        <div class="col-md-10 game-teams" [class.disabled]="game.home === 'Bye' || game.away === 'Bye'">
+            <div *ngIf="game.isInternational" class="col-12 game-information text-center">
+                <strong>This is an international game played in {{ game.internationalLocation }}</strong>
+            </div>
             <div class="row game-teams-row">
                 <div class="col-5 game-teams__team m-auto" (click)="setPrediction(game.away)">
                     <p class="game-teams__team-name lead m-auto" [class.winner]="game.away === prediction" [class.loser]="game.home === prediction" [class.current-team]="game.away === currentTeam">

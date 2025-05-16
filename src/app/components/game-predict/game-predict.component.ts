@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Game } from '../../game/game';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-game-predict',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './game-predict.component.html',
   styleUrl: './game-predict.component.less'
 })

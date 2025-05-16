@@ -49,7 +49,10 @@
       </div>
       <ul class="list-group text-center">
         <ng-container *ngFor="let team of teams">
-            <li class="list-group-item" [ngClass]="team.name.toLowerCase() +'-button'" [class.active]="teamName === (team.city + ' ' + team.name)" (click)="changeTeamName(team.city + ' ' + team.name)" data-bs-dismiss="offcanvas">{{ team.city | titlecase }} {{ team.name | titlecase }}</li>
+            <li class="list-group-item" [ngClass]="team.name.toLowerCase() +'-button'" [class.active]="teamName === (team.city + ' ' + team.name)" (click)="changeTeamName(team.city + ' ' + team.name)" data-bs-dismiss="offcanvas">
+              {{ team.city | titlecase }} {{ team.name | titlecase }}
+              <span *ngIf="isTeamComplete(team.name)" class="badge bg-success rounded-pill">Complete</span>
+            </li>
         </ng-container>
       </ul>
     </div>
@@ -58,15 +61,21 @@
 <app-submit-predictions-modal [playerName]="playerName" [showColor]="showColor" [submitCallback]="sendPredictions.bind(this)"
 (nameChange)="changePlayerName($event)" [readyToSubmit]="readyToSubmit"></app-submit-predictions-modal>
 
-<div class="container text-center">
-    <h1 class="page-title display-3">Make Your Predictions</h1>
+<div class="text-center">
+  <h1 class="page-title display-3">Make Your Predictions</h1>
+</div>
+<div class="bg-dark px-5 text-center">
     <h2 class="page-subtitle display-5">{{ teamName }} 
         <a class="help" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="playVideos()">
            <i class="bi bi-question-circle"></i>
         </a>
     </h2>
     <p class="lead record">{{ wins }} - {{ losses }}</p>
-    <div class="content-wrapper scrollable">
+    <hr>
+</div>
+<div class="container text-center scrollable">
+  
+    <div class="content-wrapper ">
         <ul class="list-group prediction-list">
             <ng-container *ngFor="let game of getAllGames()">
                 <app-game-predict [game]="game" (gamePredicted)="updateRecord($event)" [currentTeam]="teamName" [prediction]="getPredictionForGame(game.id)"></app-game-predict>

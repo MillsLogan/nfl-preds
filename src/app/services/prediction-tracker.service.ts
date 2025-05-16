@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
-const NUMBER_OF_GAMES: number = 5;
-const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz-InjLxtyvK6cJoN2aSs2Le54ZJuKPLMDTCYlnEhsJSoUQ7nKdMyFRqUwLcBrUS4qV/exec";
+const NUMBER_OF_GAMES: number = 90;
+const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbxV1i7zFOOTXpiSYv8FgCyndmdtsIDxpi9VCSL5WSusoCDzLsQO4lZ33pesf7_60VY/exec";
 
 @Injectable({
   providedIn: 'root'
@@ -83,14 +83,15 @@ export class PredictionTrackerService {
         color: color ?? "red"
       }
     }
+
     console.log(postBody);
-    return;
+
     fetch(POST_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain', // prevents preflight request not ideal but works
       },
-      body: JSON.stringify(this.predictions)
+      body: JSON.stringify(postBody)
     }).then(response => {
       console.log(response);
       if (response.ok) {
@@ -102,18 +103,14 @@ export class PredictionTrackerService {
     })
   }
 
-  savePredictions() {
-    let outputString = "home,away,prediction\n"
-    let games = this.database.getGames();
-    Object.values(games).forEach(game => {
-      // Download the predictions as a CSV file
-      outputString += `${game.home},${game.away},${this.predictions[game.id].winner}\n`;
-    });
-    let blob = new Blob([outputString], {type: 'text/csv'});
-    let url = window.URL.createObjectURL(blob);
-    let a = document.createElement('a');
-    a.download = 'predictions.csv';
-    a.href = url;
-    a.click();
+  isTeamComplete(teamName: string): boolean {
+    let teamSchedule = this.database.getTeamSchedule(teamName);
+    console.log("Team schedule: ", teamName);
+    for (let game of teamSchedule) {
+      if (!this.predictions[game.id]) {
+        return false;
+      }
+    }
+    return true;
   }
 }
