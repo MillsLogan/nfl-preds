@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
-const NUMBER_OF_GAMES: number = 5;
+const NUMBER_OF_GAMES: number = 90;
 const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
 
 @Injectable({
