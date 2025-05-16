@@ -28,7 +28,7 @@ jobs:
     - name: Deploy to GitHub Pages branch
       run: |
           mkdir -p out
-          cp -r dist/nfl-preds/browser/* out/
+          cp -r dist/browser/* out/
           touch out/.nojekyll
 
           cd out
