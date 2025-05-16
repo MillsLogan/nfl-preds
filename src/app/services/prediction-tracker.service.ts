@@ -3,7 +3,7 @@ import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
 const NUMBER_OF_GAMES: number = 90;
-const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbxV1i7zFOOTXpiSYv8FgCyndmdtsIDxpi9VCSL5WSusoCDzLsQO4lZ33pesf7_60VY/exec";
+const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycby5fQZ5Hfs9apsyaDXIylaGVxk4_7owCpdYcWGlbIKEJCw9BTMFBeKm77WkhNdjNrKH/exec";
 
 @Injectable({
   providedIn: 'root'
