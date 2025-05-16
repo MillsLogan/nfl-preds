@@ -17,9 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngfootball",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/nfl-preds/",
             "polyfills": [
               "zone.js"
             ],
