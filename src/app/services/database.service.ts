@@ -156,7 +156,7 @@ export class DatabaseService {
 
   private async init() {
     // const response = test_data; // STUBBED FOR TESTING
-    if (window.location.href.includes("pam")) {
+    if (window.location.href.includes("sandstrom")) {
       const response = await fetch(PAM_GET_ENDPOINT).then(response => response.json());
       this.initDB(response);
     } else {

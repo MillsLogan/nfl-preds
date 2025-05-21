@@ -99,7 +99,7 @@ export class PredictionTrackerService {
       console.log(response);
       if (response.ok) {
         alert('Predictions saved successfully');
-        window.location.href = window.location.href.includes("mills") ? "/mills" : "pam"; // Redirect to the home page
+        window.location.href = window.location.href.includes("mills") ? "/mills" : "sandstrom"; // Redirect to the home page
       } else {
         alert('Error saving predictions');
       }
