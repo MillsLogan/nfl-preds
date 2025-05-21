@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
+import { Router } from '@angular/router';
 
-const NUMBER_OF_GAMES: number = 90;
 const MILLS_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
 const PAM_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec";
 @Injectable({
@@ -44,6 +44,7 @@ export class PredictionTrackerService {
   }
 
   validatePredictions(): boolean {
+    const NUMBER_OF_GAMES = this.database.getGames().length;
     if (Object.keys(this.predictions).length !== NUMBER_OF_GAMES) {
       return false;
     }
@@ -98,7 +99,7 @@ export class PredictionTrackerService {
       console.log(response);
       if (response.ok) {
         alert('Predictions saved successfully');
-        window.location.href = '/'; // Redirect to the home page
+        window.location.href = window.location.href.includes("mills") ? "/mills" : "pam"; // Redirect to the home page
       } else {
         alert('Error saving predictions');
       }
