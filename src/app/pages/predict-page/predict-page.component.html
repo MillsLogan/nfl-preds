@@ -71,21 +71,20 @@
         </a>
     </h2>
     <p class="lead record">{{ wins }} - {{ losses }}</p>
+
+    <div class="row gx-3">
+        <button class="btn btn-primary mx-auto col-12 col-md-5 mb-2" data-bs-toggle="offcanvas" data-bs-target="#teamSelectionButtons">Switch Team</button>
+
+        <button class="btn btn-success mx-auto col-12 col-md-5" data-bs-toggle="modal" data-bs-target="#submitModal" (click)="isReadyToSubmit()">Submit Predictions</button>
+    </div>
     <hr>
 </div>
 <div class="container text-center scrollable">
-  
     <div class="content-wrapper ">
         <ul class="list-group prediction-list">
             <ng-container *ngFor="let game of getAllGames()">
                 <app-game-predict [game]="game" (gamePredicted)="updateRecord($event)" [currentTeam]="teamName" [prediction]="getPredictionForGame(game.id)"></app-game-predict>
             </ng-container>
         </ul>
-    </div>
-
-    <div class="row gx-3 mt-5 mb-5">
-        <button class="btn btn-primary mx-auto col-5 col-sm-5" data-bs-toggle="offcanvas" data-bs-target="#teamSelectionButtons">Switch Team</button>
-
-        <button class="btn btn-success mx-auto col-5 col-sm-5" data-bs-toggle="modal" data-bs-target="#submitModal" (click)="isReadyToSubmit()">Submit Predictions</button>
     </div>
 </div>

@@ -22,21 +22,27 @@
             </a>
             <ul class="dropdown-menu">
               <ng-container *ngFor="let team of teams">
-                <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="['/team', team]">{{ team | titlecase }}</a></li>
+                <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="[household, 'team', team]">{{ team | titlecase }}</a></li>
               </ng-container>
             </ul>
           </li>
           <li class="nav-item" data-bs-dismiss="offcanvas">
-            <a class="nav-link" data-bs-dismiss="offcanvas" [class.active]="activePage === 'week'" routerLink="/week">
+            <a class="nav-link" data-bs-dismiss="offcanvas" [class.active]="activePage === 'week'" [routerLink]="[household, 'week']">
                 Week View
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-dismiss="offcanvas" [class.active]="activePage === 'predict'" routerLink="/predict">
+            <a class="nav-link" data-bs-dismiss="offcanvas" [class.active]="activePage === 'predict'" [routerLink]="[household, 'predict']">
                 Make Predictions
             </a>
           </li>
+          <li class="nav-item">
+            <a class="btn btn-danger" data-bs-dismiss="offcanvas" [class.active]="activePage === ''" [routerLink]="[household==='mills' ? 'pam' : 'mills', 'home']" (click)="reloadPage()">
+                Switch Households
+            </a>
+          </li>
         </ul>
+
       </div>
     </div>
   </div>

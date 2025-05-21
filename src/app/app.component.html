@@ -1,5 +1,5 @@
 <div class="sticky-top">
-  <app-navbar [activePage]="getActivePage()" [teams]="millsTeams"></app-navbar>
+  <app-navbar [activePage]="getActivePage()" [teams]="getHousehold()==='mills' ? millsTeams : pamsTeams" [household]="getHousehold()"></app-navbar>
 </div>
 <ng-container *ngIf="!database.ready; else showPage">
   <app-loading></app-loading>

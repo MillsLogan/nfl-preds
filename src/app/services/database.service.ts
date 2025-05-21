@@ -10,7 +10,8 @@ import { TeamInformation } from '../interfaces';
 
 // const PREDICTION_START_INDEX: number = 6;
 // const HEADER_ROW_COUNT: number = 1;
-const GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec?table=games&table=players&table=predictions";
+const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec?table=games&table=players&table=predictions";
+const PAM_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec?table=games&table=players&table=predictions";
 const WEEK_DATES: moment.Moment[] = [
   moment("2025-09-04"),
   moment("2025-09-11"),
@@ -60,6 +61,17 @@ export class DatabaseService {
     }
 
     return undefined;
+  }
+
+  public getPamsTeams(): TeamInformation[] {
+    let pamsTeams: String[] = ["steelers", "cowboys", "eagles", "vikings", "colts"]
+    let teams: TeamInformation[] = [];
+    for (let team of this.teams) {
+      if (pamsTeams.includes(team.name.toLowerCase())) {
+        teams.push(team);
+      }
+    }
+    return teams;
   }
 
   public getMillsTeams(): TeamInformation[] {
@@ -144,9 +156,13 @@ export class DatabaseService {
 
   private async init() {
     // const response = test_data; // STUBBED FOR TESTING
-    const response = await fetch(GET_ENDPOINT).then(response => response.json());
-    this.initDB(response);
-    
+    if (window.location.href.includes("pam")) {
+      const response = await fetch(PAM_GET_ENDPOINT).then(response => response.json());
+      this.initDB(response);
+    } else {
+      const response = await fetch(MILLS_GET_ENDPOINT).then(response => response.json());
+      this.initDB(response);
+    }
     this.ready = true;
   }
 

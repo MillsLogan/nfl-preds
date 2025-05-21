@@ -19,7 +19,7 @@ import moment from 'moment';
 })
 
 export class PredictPageComponent {
-  public teams: TeamInformation[] = this.database.getMillsTeams();
+  public teams: TeamInformation[] = location.href.includes("mills") ? this.database.getMillsTeams() : this.database.getPamsTeams();
   public teamName: string = "Steelers";
   private teamSchedule: Game[] = [];
   public wins: number = 0;

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { Team } from '../../team/team';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -14,4 +15,11 @@ import { Team } from '../../team/team';
 export class NavbarComponent {
   @Input() public activePage: string = 'home';
   @Input() public teams: string[] = [];
+  @Input() public household!: string;
+
+  public reloadPage(): void {
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  }
 }

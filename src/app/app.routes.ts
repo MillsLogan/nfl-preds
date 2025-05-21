@@ -5,16 +5,16 @@ import { PredictPageComponent } from './pages/predict-page/predict-page.componen
 import { WeekPageComponent } from './pages/week-page/week-page.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'home', component: HomeComponent },
-    { path: 'team', component: TeamComponent },
-    { path: 'team/:teamName', component: TeamComponent },
-    { path: 'team/*', redirectTo: 'team' },
-    { path: 'predict', component: PredictPageComponent },
-    { path: 'predict/:teamName', component: PredictPageComponent },
-    { path: 'predict/*', redirectTo: 'predict' },
-    { path: 'week', component: WeekPageComponent },
-    { path: 'week/:week', component: WeekPageComponent },
-    { path: 'week/:week', redirectTo: 'week' },
-    { path: '**', redirectTo: '' }
+    { path: '', redirectTo: 'mills/home', pathMatch: 'full' },
+    { path: ':household', component: HomeComponent },
+    { path: ':household/home', component: HomeComponent },
+    { path: ':household/team', component: TeamComponent },
+    { path: ':household/team/:teamName', component: TeamComponent },
+    { path: ':household/team/*', redirectTo: 'team' },
+    { path: ':household/predict', component: PredictPageComponent },
+    { path: ':household/predict/:teamName', component: PredictPageComponent },
+    { path: ':household/predict/*', redirectTo: 'predict' },
+    { path: ':household/week', component: WeekPageComponent },
+    { path: ':household/week/:week', component: WeekPageComponent },
+    { path: ':household/week/:week', redirectTo: 'week' },
 ];

@@ -3,8 +3,8 @@ import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
 const NUMBER_OF_GAMES: number = 90;
-const POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
-
+const MILLS_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
+const PAM_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec";
 @Injectable({
   providedIn: 'root'
 })
@@ -72,6 +72,8 @@ export class PredictionTrackerService {
   }
 
   sendPredictions(color?: string | null) {
+    const POST_ENDPOINT = location.href.includes("mills") ? MILLS_POST_ENDPOINT : PAM_POST_ENDPOINT;
+    
     let postBody: {[key: string]: object | null} = {
       "newPlayer": null,
       "predictions": this.predictions
