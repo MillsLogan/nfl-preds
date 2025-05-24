@@ -126,8 +126,6 @@ export class PredictPageComponent {
     }
 
     this.predictions.sendPredictions(playerColor);
-    window.location.href = "#home";
-    window.location.reload();
   }
 
   playVideos() {

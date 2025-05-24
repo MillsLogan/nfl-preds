@@ -101,7 +101,7 @@ export class PredictionTrackerService {
         alert('Predictions saved successfully');
         setTimeout(() => {
           window.location.href = window.location.href.includes("mills") ? "/mills" : "sandstrom"; // Redirect to the home page
-        }, 1000);
+        }, 300);
       } else {
         alert('Error saving predictions');
       }
