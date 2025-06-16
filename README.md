@@ -1,28 +1,16 @@
-# Ngfootball
+**nfl-preds** is a web application for managing NFL game predictions within my family. The project brings an old family tradition—making NFL game predictions on paper—into an online format for easier access, better accuracy, and remote participation.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+The site is built with **Angular** and uses **Google Sheets** as a backend for storing predictions and tracking results. A **Google Apps Script** web service handles communication between the site and the spreadsheet.
 
-## Development server
+Game outcomes are automatically updated by scraping the official NFL website every 4 hours, keeping team records accurate and standings up to date. Predictions can be made by week or by team, and standings update dynamically to reflect correct predictions.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features:
 
-## Code scaffolding
+- Family standings leaderboard
+- Predict games by week or by favorite team
+- Automatic score tracking from official NFL results
+- Predictions editable until the season begins (locking later)
+- Built in Angular with a lightweight backend using Google Apps Script + Google Sheets
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# nfl-preds
+> [!NOTE]
+> This project was made primarily for personal use, but could be forked and adapted by others with some backend customization.
