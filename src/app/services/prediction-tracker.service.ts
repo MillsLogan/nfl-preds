@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
-import { Router } from '@angular/router';
 
 const MILLS_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
 const PAM_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec";
@@ -100,9 +99,13 @@ export class PredictionTrackerService {
       if (response.ok) {
         alert('Predictions saved successfully');
         window.location.href = '/';
+        window.location.reload();
       } else {
         alert('Error saving predictions');
       }
+    }).catch(error => {
+      console.error('Error:', error);
+      alert("Your predictions should be saved, as a safety precaution, please open a new tab and confirm that your predictions are saved.")
     })
   }
 
