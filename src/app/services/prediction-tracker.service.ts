@@ -99,9 +99,7 @@ export class PredictionTrackerService {
       console.log(response);
       if (response.ok) {
         alert('Predictions saved successfully');
-        setTimeout(() => {
-          window.location.href = window.location.href.includes("mills") ? "/mills" : "sandstrom"; // Redirect to the home page
-        }, 300);
+        window.location.href = '/';
       } else {
         alert('Error saving predictions');
       }

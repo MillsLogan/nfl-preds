@@ -128,16 +128,6 @@ export class PredictPageComponent {
     this.predictions.sendPredictions(playerColor);
   }
 
-  playVideos() {
-    for(let i = 0; i < document.getElementsByClassName("video").length; i++){
-      let video = document.getElementsByClassName("video")[i] as HTMLVideoElement;
-      video.play();
-    }
-  }
-
-  activateModal() {
-  }
-
   isTeamComplete(teamName: string): boolean {
     let fullName = this.database.getFullTeamName(teamName);
     if (fullName === undefined){
