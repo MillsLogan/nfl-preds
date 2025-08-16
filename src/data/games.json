@@ -1,0 +1,904 @@
+{
+    "games": [
+    {
+      "gameId": 0,
+      "week": 1,
+      "date": "2025-09-07T17:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "New York Jets",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 1,
+      "week": 2,
+      "date": "2025-09-14T17:00:00.000Z",
+      "away": "Seattle Seahawks",
+      "home": "Pittsburgh Steelers",
+      "winner": "Seattle Seahawks",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 2,
+      "week": 3,
+      "date": "2025-09-21T17:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "New England Patriots",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 3,
+      "week": 4,
+      "date": "2025-09-28T13:30:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "Pittsburgh Steelers",
+      "winner": "Minnesota Vikings",
+      "isInternational": true,
+      "location": "Dublin, Ireland"
+    },
+    {
+      "gameId": 4,
+      "week": 6,
+      "date": "2025-10-12T17:00:00.000Z",
+      "away": "Cleveland Browns",
+      "home": "Pittsburgh Steelers",
+      "winner": "Cleveland Browns",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 5,
+      "week": 7,
+      "date": "2025-10-17T00:15:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Cincinnati Bengals",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 6,
+      "week": 8,
+      "date": "2025-10-27T00:20:00.000Z",
+      "away": "Green Bay Packers",
+      "home": "Pittsburgh Steelers",
+      "winner": "Green Bay Packers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 7,
+      "week": 9,
+      "date": "2025-11-02T18:00:00.000Z",
+      "away": "Indianapolis Colts",
+      "home": "Pittsburgh Steelers",
+      "winner": "Indianapolis Colts",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 8,
+      "week": 10,
+      "date": "2025-11-10T01:20:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Los Angeles Chargers",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 9,
+      "week": 11,
+      "date": "2025-11-16T18:00:00.000Z",
+      "away": "Cincinnati Bengals",
+      "home": "Pittsburgh Steelers",
+      "winner": "Cincinnati Bengals",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 10,
+      "week": 12,
+      "date": "2025-11-23T18:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Chicago Bears",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 11,
+      "week": 13,
+      "date": "2025-11-30T21:25:00.000Z",
+      "away": "Buffalo Bills",
+      "home": "Pittsburgh Steelers",
+      "winner": "Buffalo Bills",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 12,
+      "week": 14,
+      "date": "2025-12-07T18:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Baltimore Ravens",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 13,
+      "week": 15,
+      "date": "2025-12-16T01:15:00.000Z",
+      "away": "Miami Dolphins",
+      "home": "Pittsburgh Steelers",
+      "winner": "Miami Dolphins",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 14,
+      "week": 16,
+      "date": "2025-12-21T21:25:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Detroit Lions",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 15,
+      "week": 17,
+      "date": "2025-12-28T18:00:00.000Z",
+      "away": "Pittsburgh Steelers",
+      "home": "Cleveland Browns",
+      "winner": "Pittsburgh Steelers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 16,
+      "week": 18,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Baltimore Ravens",
+      "home": "Pittsburgh Steelers",
+      "winner": "Baltimore Ravens",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 17,
+      "week": 1,
+      "date": "2025-09-06T00:00:00.000Z",
+      "away": "Kansas City Chiefs",
+      "home": "Los Angeles Chargers",
+      "winner": "Kansas City Chiefs",
+      "isInternational": true,
+      "location": "Sao Paulo, Brazil"
+    },
+    {
+      "gameId": 18,
+      "week": 2,
+      "date": "2025-09-16T02:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Las Vegas Raiders",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 19,
+      "week": 3,
+      "date": "2025-09-21T20:05:00.000Z",
+      "away": "Denver Broncos",
+      "home": "Los Angeles Chargers",
+      "winner": "Denver Broncos",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 20,
+      "week": 4,
+      "date": "2025-09-28T17:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "New York Giants",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 21,
+      "week": 5,
+      "date": "2025-10-05T20:25:00.000Z",
+      "away": "Washington Commanders",
+      "home": "Los Angeles Chargers",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 22,
+      "week": 6,
+      "date": "2025-10-12T17:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Miami Dolphins",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 23,
+      "week": 7,
+      "date": "2025-10-19T20:05:00.000Z",
+      "away": "Indianapolis Colts",
+      "home": "Los Angeles Chargers",
+      "winner": "Indianapolis Colts",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 24,
+      "week": 8,
+      "date": "2025-10-24T00:15:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "Los Angeles Chargers",
+      "winner": "Minnesota Vikings",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 25,
+      "week": 9,
+      "date": "2025-10-02T17:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Tennessee Titans",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 26,
+      "week": 11,
+      "date": "2025-11-16T18:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Jacksonville Jaguars",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 27,
+      "week": 13,
+      "date": "2025-11-13T21:25:00.000Z",
+      "away": "Las Vegas Raiders",
+      "home": "Los Angeles Chargers",
+      "winner": "Las Vegas Raiders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 28,
+      "week": 14,
+      "date": "2025-12-09T01:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Los Angeles Chargers",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 29,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Kansas City Chiefs",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 30,
+      "week": 16,
+      "date": "2025-12-21T18:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Dallas Cowboys",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 31,
+      "week": 17,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Houston Texans",
+      "home": "Los Angeles Chargers",
+      "winner": "Houston Texans",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 32,
+      "week": 18,
+      "date": "2026-01-02T05:00:00.000Z",
+      "away": "Los Angeles Chargers",
+      "home": "Denver Broncos",
+      "winner": "Los Angeles Chargers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 33,
+      "week": 1,
+      "date": "2025-09-07T17:00:00.000Z",
+      "away": "Las Vegas Raiders",
+      "home": "New England Patriots",
+      "winner": "Las Vegas Raiders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 34,
+      "week": 2,
+      "date": "2025-09-14T17:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Miami Dolphins",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 35,
+      "week": 4,
+      "date": "2025-09-28T17:00:00.000Z",
+      "away": "Carolina Panthers",
+      "home": "New England Patriots",
+      "winner": "Carolina Panthers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 36,
+      "week": 5,
+      "date": "2025-10-06T00:20:00.000Z",
+      "away": "New England Patriots",
+      "home": "Buffalo Bills",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 37,
+      "week": 6,
+      "date": "2025-10-12T20:25:00.000Z",
+      "away": "New England Patriots",
+      "home": "New Orleans Saints",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 38,
+      "week": 7,
+      "date": "2025-10-19T17:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Tennessee Titans",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 39,
+      "week": 8,
+      "date": "2025-10-26T17:00:00.000Z",
+      "away": "Cleveland Browns",
+      "home": "New England Patriots",
+      "winner": "Cleveland Browns",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 40,
+      "week": 9,
+      "date": "2025-11-02T18:00:00.000Z",
+      "away": "Atlanta Falcons",
+      "home": "New England Patriots",
+      "winner": "Atlanta Falcons",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 41,
+      "week": 10,
+      "date": "2025-11-09T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Tampa Bay Buccaneers",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 42,
+      "week": 11,
+      "date": "2025-11-14T01:15:00.000Z",
+      "away": "New York Jets",
+      "home": "New England Patriots",
+      "winner": "New York Jets",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 43,
+      "week": 12,
+      "date": "2025-11-23T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Cincinnati Bengals",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 44,
+      "week": 13,
+      "date": "2025-12-02T01:15:00.000Z",
+      "away": "New York Giants",
+      "home": "New England Patriots",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 45,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Buffalo Bills",
+      "home": "New England Patriots",
+      "winner": "Buffalo Bills",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 46,
+      "week": 16,
+      "date": "2025-12-21T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "Baltimore Ravens",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 47,
+      "week": 17,
+      "date": "2025-12-28T18:00:00.000Z",
+      "away": "New England Patriots",
+      "home": "New York Jets",
+      "winner": "New England Patriots",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 48,
+      "week": 18,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Miami Dolphins",
+      "home": "New England Patriots",
+      "winner": "Miami Dolphins",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 49,
+      "week": 1,
+      "date": "2025-09-07T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Washington Commanders",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 50,
+      "week": 2,
+      "date": "2025-09-14T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Dallas Cowboys",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 51,
+      "week": 3,
+      "date": "2025-09-22T00:20:00.000Z",
+      "away": "Kansas City Chiefs",
+      "home": "New York Giants",
+      "winner": "Kansas City Chiefs",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 52,
+      "week": 5,
+      "date": "2025-10-05T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "New Orleans Saints",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 53,
+      "week": 6,
+      "date": "2025-10-10T00:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "New York Giants",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 54,
+      "week": 7,
+      "date": "2025-10-19T20:05:00.000Z",
+      "away": "New York Giants",
+      "home": "Denver Broncos",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 55,
+      "week": 8,
+      "date": "2025-10-26T17:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Philadelphia Eagles",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 56,
+      "week": 9,
+      "date": "2025-11-02T18:00:00.000Z",
+      "away": "San Francisco 49ers",
+      "home": "New York Giants",
+      "winner": "San Francisco 49ers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 57,
+      "week": 10,
+      "date": "2025-11-09T18:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Chicago Bears",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 58,
+      "week": 11,
+      "date": "2025-11-16T18:00:00.000Z",
+      "away": "Green Bay Packers",
+      "home": "New York Giants",
+      "winner": "Green Bay Packers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 59,
+      "week": 12,
+      "date": "2025-11-23T18:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Detroit Lions",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 60,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Washington Commanders",
+      "home": "New York Giants",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 61,
+      "week": 16,
+      "date": "2025-12-21T18:00:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "New York Giants",
+      "winner": "Minnesota Vikings",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 62,
+      "week": 17,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "New York Giants",
+      "home": "Las Vegas Raiders",
+      "winner": "New York Giants",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 63,
+      "week": 18,
+      "date": "2026-01-02T05:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "New York Giants",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 64,
+      "week": 1,
+      "date": "2025-09-05T00:20:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Philadelphia Eagles",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 65,
+      "week": 2,
+      "date": "2025-09-14T20:25:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Kansas City Chiefs",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 66,
+      "week": 3,
+      "date": "2025-09-21T17:00:00.000Z",
+      "away": "Los Angeles Rams",
+      "home": "Philadelphia Eagles",
+      "winner": "Los Angeles Rams",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 67,
+      "week": 4,
+      "date": "2025-09-28T17:00:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Tampa Bay Buccaneers",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 68,
+      "week": 5,
+      "date": "2025-10-05T17:00:00.000Z",
+      "away": "Denver Broncos",
+      "home": "Philadelphia Eagles",
+      "winner": "Denver Broncos",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 69,
+      "week": 7,
+      "date": "2025-10-19T17:00:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Minnesota Vikings",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 70,
+      "week": 10,
+      "date": "2025-11-11T01:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Green Bay Packers",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 71,
+      "week": 11,
+      "date": "2025-11-17T01:20:00.000Z",
+      "away": "Detroit Lions",
+      "home": "Philadelphia Eagles",
+      "winner": "Detroit Lions",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 72,
+      "week": 12,
+      "date": "2025-11-23T21:25:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Dallas Cowboys",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 73,
+      "week": 13,
+      "date": "2025-11-28T20:00:00.000Z",
+      "away": "Chicago Bears",
+      "home": "Philadelphia Eagles",
+      "winner": "Chicago Bears",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 74,
+      "week": 15,
+      "date": "2025-12-14T18:00:00.000Z",
+      "away": "Las Vegas Raiders",
+      "home": "Philadelphia Eagles",
+      "winner": "Las Vegas Raiders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 75,
+      "week": 16,
+      "date": "2026-01-01T05:00:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Washington Commanders",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 76,
+      "week": 17,
+      "date": "2025-12-28T21:25:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Buffalo Bills",
+      "winner": "Philadelphia Eagles",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 77,
+      "week": 18,
+      "date": "2026-01-02T05:00:00.000Z",
+      "away": "Washington Commanders",
+      "home": "Philadelphia Eagles",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 78,
+      "week": 3,
+      "date": "2025-09-21T20:25:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Chicago Bears",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 79,
+      "week": 4,
+      "date": "2025-09-29T00:20:00.000Z",
+      "away": "Green Bay Packers",
+      "home": "Dallas Cowboys",
+      "winner": "Green Bay Packers",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 80,
+      "week": 5,
+      "date": "2025-10-05T17:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "New York Jets",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 81,
+      "week": 6,
+      "date": "2025-10-12T17:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Carolina Panthers",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 82,
+      "week": 7,
+      "date": "2025-10-19T20:25:00.000Z",
+      "away": "Washington Commanders",
+      "home": "Dallas Cowboys",
+      "winner": "Washington Commanders",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 83,
+      "week": 8,
+      "date": "2025-10-26T20:25:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Denver Broncos",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 84,
+      "week": 9,
+      "date": "2025-11-04T01:15:00.000Z",
+      "away": "Arizona Cardinals",
+      "home": "Dallas Cowboys",
+      "winner": "Arizona Cardinals",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 85,
+      "week": 11,
+      "date": "2025-11-18T01:15:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Las Vegas Raiders",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 86,
+      "week": 13,
+      "date": "2025-11-27T21:30:00.000Z",
+      "away": "Kansas City Chiefs",
+      "home": "Dallas Cowboys",
+      "winner": "Kansas City Chiefs",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 87,
+      "week": 14,
+      "date": "2025-12-05T01:15:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Detroit Lions",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 88,
+      "week": 15,
+      "date": "2025-12-15T01:20:00.000Z",
+      "away": "Minnesota Vikings",
+      "home": "Dallas Cowboys",
+      "winner": "Minnesota Vikings",
+      "isInternational": false,
+      "location": ""
+    },
+    {
+      "gameId": 89,
+      "week": 17,
+      "date": "2025-12-25T18:00:00.000Z",
+      "away": "Dallas Cowboys",
+      "home": "Washington Commanders",
+      "winner": "Dallas Cowboys",
+      "isInternational": false,
+      "location": ""
+    }
+  ]
+}
