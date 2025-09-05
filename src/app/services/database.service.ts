@@ -10,7 +10,7 @@ import { TeamInformation } from '../interfaces';
 
 // const PREDICTION_START_INDEX: number = 6;
 // const HEADER_ROW_COUNT: number = 1;
-const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec?table=games&table=players&table=predictions";
+const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbyhlfKI408tdcNbKbTzj-dhUaY-DN3lv-HxF8s-JsoC0srkLw53LHDax-d_LtiUesQv/exec?table=games&table=players&table=predictions";
 const PAM_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec?table=games&table=players&table=predictions";
 const WEEK_DATES: moment.Moment[] = [
   moment("2025-09-11"),
