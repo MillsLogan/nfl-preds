@@ -13,11 +13,24 @@ import { TeamInformation } from '../interfaces';
 const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec?table=games&table=players&table=predictions";
 const PAM_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec?table=games&table=players&table=predictions";
 const WEEK_DATES: moment.Moment[] = [
-  moment("2025-09-04"),
   moment("2025-09-11"),
   moment("2025-09-18"),
   moment("2025-09-25"),
   moment("2025-10-02"),
+  moment("2025-10-09"),
+  moment("2025-10-16"),
+  moment("2025-10-23"),
+  moment("2025-10-30"),
+  moment("2025-11-06"),
+  moment("2025-11-13"),
+  moment("2025-11-20"),
+  moment("2025-11-27"),
+  moment("2025-12-04"),
+  moment("2025-12-11"),
+  moment("2025-12-18"),
+  moment("2025-12-25"),
+  moment("2026-01-01"),
+  moment("2026-01-08"),
 ]
 
 @Injectable({
@@ -195,6 +208,8 @@ export class DatabaseService {
     for (const player of data) {
       this.players[player.name] = new Player(player.name, player.color);
     }
+
+    console.log(this.players);
 
     console.log(this.predictions);
     for (const [gameId, predictionData] of Object.entries(this.predictions)) {
