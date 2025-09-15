@@ -43,6 +43,7 @@ export class WeekPageComponent {
     public changeWeek(week: number) {
       this.weekNumber = week;
       this.weekGames = this.database.getWeekGames(this.weekNumber);
+      this.initRecords();
     }
 
     public getPlayerScores(): any[] {
