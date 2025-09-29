@@ -9,6 +9,7 @@ export class Game {
     winner: string | null;
     isInternational: boolean = false;
     internationalLocation: string | null = null;
+    isTie: boolean = false;
 
     constructor(id: number, week: number, date: moment.Moment, away: string, home: string, winner: string | null, isInternational: boolean = false, internationalLocation: string | null = null) {
         this.id = id;
@@ -19,20 +20,8 @@ export class Game {
         this.winner = winner;
         this.isInternational = isInternational;
         this.internationalLocation = internationalLocation;
+        this.isTie = winner === null && this.date.add(moment.duration(12, 'hours')).isBefore(moment());
     }
-
-    // static fromSheetRow(id: number, row: any): Game {
-    //     let week = parseInt(row[0]);
-    //     let date = moment(row[1], "MM/DD/YYYY");
-    //     let time = row[2];
-    //     let home = row[3];
-    //     let away = row[4];
-    //     let winner = row[5];
-    //     if(winner === undefined){
-    //         winner = null;
-    //     }
-    //     return new Game(id, week, date, time, home, away, winner);
-    // }
 
     static fromSheetRow(row: [string, string, string, string, string, string, string, string, string]): Game {
         let id = parseInt(row[0]);

@@ -7,14 +7,19 @@
         </div>
         <div class="col-md-10 game-teams">
             <div class="row game-teams-row">
+                <ng-container *ngIf="game.isTie">
+                    <div class="col-12 text-center tied-game-notice mb-2">
+                        <span class="badge bg-warning text-dark">TIE!</span>
+                    </div>
+                </ng-container>
                 <div class="col-5 game-teams__team m-auto">
-                    <p class="game-teams__team-name lead m-auto" [class.winner]="game.away === game.winner" [class.loser]="game.home === game.winner">{{ game.away }}</p>
+                    <p class="game-teams__team-name lead m-auto" [class.winner]="game.away === game.winner" [class.loser]="game.home === game.winner" [class.tie]="game.isTie">{{ game.away }}</p>
                 </div>
                 <div class="col-2 game-teams__vs m-auto">
                     <p class="game-teams__vs-text lead m-auto">VS</p>
                 </div>
                 <div class="col-5 game-teams__team m-auto">
-                    <p class="game-teams__team-name lead m-auto" [class.winner]="game.home === game.winner" [class.loser]="game.away === game.winner">{{ game.home }}</p>
+                    <p class="game-teams__team-name lead m-auto" [class.winner]="game.home === game.winner" [class.loser]="game.away === game.winner" [class.tie]="game.isTie">{{ game.home }}</p>
                 </div>
             </div>
             <div class="game-information-pop">
