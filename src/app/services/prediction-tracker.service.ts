@@ -72,7 +72,7 @@ export class PredictionTrackerService {
   }
 
   sendPredictions(color?: string | null) {
-    const POST_ENDPOINT = location.href.includes("mills") ? MILLS_POST_ENDPOINT : PAM_POST_ENDPOINT;
+    const POST_ENDPOINT = location.href.includes("sandstrom") ? PAM_POST_ENDPOINT : MILLS_POST_ENDPOINT;
     
     let postBody: {[key: string]: object | null} = {
       "newPlayer": null,
