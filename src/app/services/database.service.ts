@@ -1,10 +1,8 @@
 import { Injectable, Output } from '@angular/core';
 import { Game } from '../game/game';
-import { Team } from '../team/team';
 import { Prediction } from '../prediction/prediction';
 import moment from 'moment';
 import { Player } from '../player/player';
-import test_data from "../../data/testResponse.json";
 import team_data from "../../data/teams.json";
 import { TeamInformation } from '../interfaces';
 
