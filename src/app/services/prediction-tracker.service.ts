@@ -44,7 +44,6 @@ export class PredictionTrackerService {
 
   validatePredictions(): boolean {
     const NUMBER_OF_GAMES = this.database.getGames().length;
-    return true;
     if (Object.keys(this.predictions).length !== NUMBER_OF_GAMES) {
       return false;
     }
