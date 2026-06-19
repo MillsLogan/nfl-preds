@@ -26,7 +26,6 @@ export class AppComponent {
 
   public getHousehold(): string {
     let url = this.router.url.split('/')[1];
-    console.log(url);
     if (url === "mills" || url === "sandstrom") {
       return url;
     }

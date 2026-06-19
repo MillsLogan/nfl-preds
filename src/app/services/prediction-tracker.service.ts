@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
-const MILLS_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
+const MILLS_POST_ENDPOINT: string = 'http://127.0.0.1:8000/predictions';
+//"https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
 const PAM_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec";
 @Injectable({
   providedIn: 'root'
@@ -45,7 +46,7 @@ export class PredictionTrackerService {
   validatePredictions(): boolean {
     const NUMBER_OF_GAMES = this.database.getGames().length;
     if (Object.keys(this.predictions).length !== NUMBER_OF_GAMES) {
-      return false;
+      return true;
     }
     return true;
   }
@@ -73,27 +74,27 @@ export class PredictionTrackerService {
 
   sendPredictions(color?: string | null) {
     const POST_ENDPOINT = location.href.includes("sandstrom") ? PAM_POST_ENDPOINT : MILLS_POST_ENDPOINT;
-    
+    let predictions = Object.values(this.predictions);
     let postBody: {[key: string]: object | null} = {
       "newPlayer": null,
-      "predictions": this.predictions
+      "predictions": predictions
     };
 
-    if (!this.checkIfPlayerExists(this.predictions[0].playerName)){
+    if (!this.checkIfPlayerExists(predictions[0].playerName)){
       postBody["newPlayer"] = {
-        playerName: this.predictions[0].playerName,
-        color: color ?? "red"
+        name: predictions[0].playerName,
+        color: color ?? "red",
+        affiliation: location.href.includes("sandstrom") ? "sandstrom" : "mills"
       }
     }
-
     console.log(postBody);
 
     fetch(POST_ENDPOINT, {
       method: 'POST',
       headers: {
-        'Content-Type': 'text/plain', // prevents preflight request not ideal but works
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(postBody)
+      body: postBody ? JSON.stringify(postBody) : null
     }).then(response => {
       console.log(response);
       if (response.ok) {
@@ -111,7 +112,6 @@ export class PredictionTrackerService {
 
   isTeamComplete(teamName: string): boolean {
     let teamSchedule = this.database.getTeamSchedule(teamName);
-    console.log("Team schedule: ", teamName);
     for (let game of teamSchedule) {
       if (!this.predictions[game.id]) {
         return false;
