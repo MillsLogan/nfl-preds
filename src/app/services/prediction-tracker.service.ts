@@ -46,9 +46,8 @@ export class PredictionTrackerService {
 
   validatePredictions(): boolean {
     const NUMBER_OF_GAMES = this.database.getGames().length;
-    return true;
     if (Object.keys(this.predictions).length !== NUMBER_OF_GAMES) {
-      return true;
+      return false;
     }
     return true;
   }
@@ -76,15 +75,14 @@ export class PredictionTrackerService {
 
   sendPredictions(color?: string | null) {
     const POST_ENDPOINT = location.href.includes("sandstrom") ? PAM_POST_ENDPOINT : MILLS_POST_ENDPOINT;
-    let predictions = Object.values(this.predictions);
     let postBody: {[key: string]: object | null} = {
       "newPlayer": null,
-      "predictions": predictions
+      "predictions": this.predictions
     };
 
-    if (!this.checkIfPlayerExists(predictions[0].playerName)){
+    if (!this.checkIfPlayerExists(this.predictions[0].playerName)){
       postBody["newPlayer"] = {
-        name: predictions[0].playerName,
+        playerName: this.predictions[0].playerName,
         color: color ?? "red",
         affiliation: location.href.includes("sandstrom") ? "sandstrom" : "mills"
       }
@@ -94,7 +92,7 @@ export class PredictionTrackerService {
     fetch(POST_ENDPOINT, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain',
       },
       body: postBody ? JSON.stringify(postBody) : null
     }).then(response => {
