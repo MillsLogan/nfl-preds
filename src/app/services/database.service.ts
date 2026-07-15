@@ -8,8 +8,7 @@ import { TeamInformation } from '../interfaces';
 
 // const PREDICTION_START_INDEX: number = 6;
 // const HEADER_ROW_COUNT: number = 1;
-const MILLS_GET_ENDPOINT: string = "http://127.0.0.1:8000";
-// const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbyhlfKI408tdcNbKbTzj-dhUaY-DN3lv-HxF8s-JsoC0srkLw53LHDax-d_LtiUesQv/exec?table=games&table=players&table=predictions";
+const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbzo7oB5GJ0_QR8az9aksTx2qfPq-8dtxx-5lHmtmN7T055rfPFjFlDlJx88z3EgYMuy/exec?table=games&table=players&table=predictions";
 const PAM_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec?table=games&table=players&table=predictions";
 const WEEK_DATES: moment.Moment[] = [
   moment("2026-09-11"),
@@ -172,13 +171,8 @@ export class DatabaseService {
       const response = await fetch(PAM_GET_ENDPOINT).then(response => response.json());
       this.initDB(response);
     } else {
-      const games = await fetch(MILLS_GET_ENDPOINT + "/games").then(response => response.json());
-      const players = await fetch(MILLS_GET_ENDPOINT + "/players").then(response => response.json());
-      const predictions = await fetch(MILLS_GET_ENDPOINT + "/predictions").then(response => response.json());
-      this.initGames(games);
-      this.initPlayers(players);
-      this.initPredictions(predictions);
-      this.initTeams();
+      const response = await fetch(MILLS_GET_ENDPOINT).then(response => response.json());
+      this.initDB(response);
     }
     this.ready = true;
   }
@@ -195,13 +189,16 @@ export class DatabaseService {
   }
 
   private initGames(data: any) {
-    this.games = data.map((game: any) => new Game(game.gameID, game.week, moment(game.date), game.away, game.home, game.winner, game.isInternational, game.location));
+    this.games = data.map((game: any) => new Game(game.gameId, game.week, moment(game.date), game.away, game.home, game.winner, game.isInternational, game.location));
   }
 
-  private initPredictions(predictions: {gameId: number, playerName: string, winner: string, _id: number, createdAt: string, updatedAt: string}[]) {
-    for (const prediction of predictions) {
-      this.predictions[prediction.gameId] = this.predictions[prediction.gameId] || {};
-      this.predictions[prediction.gameId][prediction.playerName] = new Prediction(prediction.playerName, prediction.gameId, prediction.winner);
+  private initPredictions(data: { [gameId: string]: {gameID: number, playerName: string, predictedWinner: string}[] }) {
+    for (const [gameId, predictionData] of Object.entries(data)) {
+      const numGameId = parseInt(gameId);
+      this.predictions[numGameId] = {};
+      for (const prediction of Object.values(predictionData)) {
+        this.predictions[parseInt(gameId)][prediction.playerName] = new Prediction(prediction.playerName, numGameId, prediction.predictedWinner);
+      }
     }
   }
 

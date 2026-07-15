@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Prediction } from '../prediction/prediction';
 
-const MILLS_POST_ENDPOINT: string = 'http://127.0.0.1:8000/predictions';
+const MILLS_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbzo7oB5GJ0_QR8az9aksTx2qfPq-8dtxx-5lHmtmN7T055rfPFjFlDlJx88z3EgYMuy/exec";
+// //'http://127.0.0.1:8000/predictions';
 //"https://script.google.com/macros/s/AKfycbz85w2l9mMqaOFc8XF1yaN3anb69Usk5B79hY9SPQYSgsi01tRpn3XzGStnGmFgVj7O/exec";
 const PAM_POST_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec";
 @Injectable({
