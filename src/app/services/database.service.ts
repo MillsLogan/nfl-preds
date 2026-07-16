@@ -9,7 +9,7 @@ import { TeamInformation } from '../interfaces';
 // const PREDICTION_START_INDEX: number = 6;
 // const HEADER_ROW_COUNT: number = 1;
 const MILLS_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbzo7oB5GJ0_QR8az9aksTx2qfPq-8dtxx-5lHmtmN7T055rfPFjFlDlJx88z3EgYMuy/exec?table=games&table=players&table=predictions";
-const PAM_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbwVWBnoxIVuxsVKh6EziCBV5xc512lKH23VtK_mtxgj-zm4cPixuCtlBoR00y5QQuBQjw/exec?table=games&table=players&table=predictions";
+const PAM_GET_ENDPOINT: string = "https://script.google.com/macros/s/AKfycbw9qL9pv30Zu4o3n3ZEqtWykyJpzchJFlwKynPHIAiKigMXz5iqNt-IWOJf63JdtNAH/exec?table=games&table=players&table=predictions";
 const WEEK_DATES: moment.Moment[] = [
   moment("2026-09-11"),
   moment("2026-09-18"),

@@ -20,7 +20,7 @@ export class Game {
         this.winner = winner;
         this.isInternational = isInternational;
         this.internationalLocation = internationalLocation;
-        this.isTie = winner === null && this.date.add(moment.duration(12, 'hours')).isBefore(moment());
+        this.isTie = winner === null && this.date.clone().add(moment.duration(12, 'hours')).isBefore(moment());
     }
 
     static fromSheetRow(row: [string, string, string, string, string, string, string, string, string]): Game {
