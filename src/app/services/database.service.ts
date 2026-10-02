@@ -40,7 +40,7 @@ export class DatabaseService {
   private predictions: {[gameId: number]: {[playername: string]: Prediction}} = {};
   private players: { [name: string]: Player} = {};
   private teams: TeamInformation[] = [];
-  public currentWeek: number = 1;
+  public currentWeek: number = 0;
   @Output() ready: boolean = false;
 
   constructor() {
